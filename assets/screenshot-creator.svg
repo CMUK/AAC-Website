@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Smart board creator screenshot</title>
+  <desc id="desc">A photo-to-board workflow showing an image, detected crop boxes, and a generated communication grid.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1d34"/>
+      <stop offset="100%" stop-color="#06101d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffcb6b"/>
+      <stop offset="100%" stop-color="#ff8f70"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="40" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1120" height="820" rx="34" fill="#101c35" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <rect x="76" y="76" width="1048" height="60" rx="18" fill="rgba(255,255,255,0.05)"/>
+  <text x="102" y="114" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="22" font-weight="700">Smart Board Creator</text>
+  <g transform="translate(78 160)">
+    <rect width="468" height="666" rx="32" fill="rgba(255,255,255,0.05)"/>
+    <rect x="28" y="28" width="412" height="610" rx="24" fill="#1a2945" stroke="rgba(255,255,255,0.1)"/>
+    <rect x="62" y="64" width="344" height="538" rx="20" fill="url(#accent)"/>
+    <rect x="96" y="96" width="276" height="116" rx="18" fill="rgba(8,17,31,0.3)"/>
+    <rect x="96" y="232" width="276" height="116" rx="18" fill="rgba(8,17,31,0.3)"/>
+    <rect x="96" y="368" width="276" height="116" rx="18" fill="rgba(8,17,31,0.3)"/>
+    <rect x="96" y="504" width="276" height="60" rx="18" fill="rgba(8,17,31,0.3)"/>
+    <text x="122" y="166" fill="#fff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" font-weight="700">Photo input</text>
+    <text x="122" y="302" fill="#fff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" font-weight="700">Crop boxes</text>
+    <text x="122" y="438" fill="#fff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" font-weight="700">Items detected</text>
+    <text x="122" y="544" fill="#fff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20" font-weight="700">Manual adjust if needed</text>
+    <rect x="480" y="36" width="20" height="80" rx="10" fill="rgba(255,255,255,0.07)"/>
+  </g>
+  <g transform="translate(588 160)">
+    <rect width="532" height="666" rx="32" fill="rgba(255,255,255,0.05)"/>
+    <rect x="28" y="28" width="476" height="610" rx="24" fill="#172848"/>
+    <g transform="translate(52 54)">
+      <rect width="164" height="140" rx="24" fill="rgba(110,231,216,0.18)"/>
+      <rect x="190" width="164" height="140" rx="24" fill="rgba(255,203,107,0.18)"/>
+      <rect x="380" width="164" height="140" rx="24" fill="rgba(135,167,255,0.18)"/>
+      <rect y="164" width="164" height="140" rx="24" fill="rgba(255,255,255,0.05)"/>
+      <rect x="190" y="164" width="164" height="140" rx="24" fill="rgba(255,255,255,0.05)"/>
+      <rect x="380" y="164" width="164" height="140" rx="24" fill="rgba(255,255,255,0.05)"/>
+      <rect y="328" width="164" height="140" rx="24" fill="rgba(255,255,255,0.05)"/>
+      <rect x="190" y="328" width="164" height="140" rx="24" fill="rgba(255,255,255,0.05)"/>
+      <rect x="380" y="328" width="164" height="140" rx="24" fill="rgba(255,255,255,0.05)"/>
+      <text x="30" y="82" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="20" font-weight="700">snack</text>
+      <text x="218" y="82" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="20" font-weight="700">drink</text>
+      <text x="408" y="82" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="20" font-weight="700">help</text>
+      <text x="22" y="246" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">grid generated</text>
+      <text x="208" y="246" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">one tap edit</text>
+      <text x="394" y="246" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">ready to use</text>
+      <text x="26" y="410" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">worksheet</text>
+      <text x="210" y="410" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">scene photo</text>
+      <text x="400" y="410" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">real object</text>
+    </g>
+  </g>
+</svg>

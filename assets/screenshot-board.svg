@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">AAC board screenshot</title>
+  <desc id="desc">A communication board with icon tiles, a message bar, and a calm high contrast theme.</desc>
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#11213e"/>
+      <stop offset="100%" stop-color="#08111f"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6ee7d8"/>
+      <stop offset="100%" stop-color="#87a7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="40" fill="url(#g1)"/>
+  <rect x="40" y="40" width="1120" height="820" rx="34" fill="#111d34" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <rect x="78" y="74" width="104" height="40" rx="20" fill="rgba(110,231,216,0.14)"/>
+  <text x="100" y="100" fill="#6ee7d8" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18" font-weight="700">Food</text>
+  <rect x="78" y="140" width="1044" height="104" rx="24" fill="#172848"/>
+  <text x="108" y="200" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="30" font-weight="700">I want a snack</text>
+  <text x="108" y="228" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">Sentence bar with consistent core word placement</text>
+  <g transform="translate(78 280)">
+    <rect width="232" height="160" rx="28" fill="rgba(255,255,255,0.05)"/>
+    <rect x="254" width="232" height="160" rx="28" fill="rgba(255,255,255,0.05)"/>
+    <rect x="508" width="232" height="160" rx="28" fill="rgba(255,255,255,0.05)"/>
+    <rect x="762" width="232" height="160" rx="28" fill="rgba(255,255,255,0.05)"/>
+    <rect y="184" width="232" height="160" rx="28" fill="rgba(255,255,255,0.05)"/>
+    <rect x="254" y="184" width="232" height="160" rx="28" fill="rgba(110,231,216,0.16)"/>
+    <rect x="508" y="184" width="232" height="160" rx="28" fill="rgba(255,203,107,0.16)"/>
+    <rect x="762" y="184" width="232" height="160" rx="28" fill="rgba(135,167,255,0.16)"/>
+    <rect y="368" width="232" height="160" rx="28" fill="rgba(255,255,255,0.05)"/>
+    <rect x="254" y="368" width="232" height="160" rx="28" fill="rgba(255,255,255,0.05)"/>
+    <rect x="508" y="368" width="232" height="160" rx="28" fill="rgba(255,255,255,0.05)"/>
+    <rect x="762" y="368" width="232" height="160" rx="28" fill="rgba(255,255,255,0.05)"/>
+    <circle cx="116" cy="72" r="28" fill="url(#g2)"/>
+    <circle cx="370" cy="72" r="28" fill="url(#g2)"/>
+    <circle cx="624" cy="72" r="28" fill="url(#g2)"/>
+    <circle cx="878" cy="72" r="28" fill="url(#g2)"/>
+    <text x="45" y="264" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="24" font-weight="700">drink</text>
+    <text x="298" y="264" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="24" font-weight="700">snack</text>
+    <text x="548" y="264" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="24" font-weight="700">fruit</text>
+    <text x="806" y="264" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="24" font-weight="700">meal</text>
+    <text x="40" y="448" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20">breakfast</text>
+    <text x="286" y="448" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20">lunch</text>
+    <text x="538" y="448" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20">dinner</text>
+    <text x="808" y="448" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20">drink more</text>
+    <text x="44" y="632" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20">fruit snack</text>
+    <text x="284" y="632" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20">eat now</text>
+    <text x="540" y="632" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20">more please</text>
+    <text x="794" y="632" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20">all done</text>
+  </g>
+</svg>

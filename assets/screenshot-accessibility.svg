@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Accessibility settings screenshot</title>
+  <desc id="desc">An accessibility screen with high contrast, spacing controls, and scanning options next to an AAC board.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111d34"/>
+      <stop offset="100%" stop-color="#060b14"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="40" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1120" height="820" rx="34" fill="#0f1a2f" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <g transform="translate(78 76)">
+    <rect width="404" height="744" rx="30" fill="rgba(255,255,255,0.05)"/>
+    <text x="30" y="54" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="22" font-weight="700">Accessibility</text>
+    <rect x="28" y="86" width="348" height="88" rx="22" fill="#172848"/>
+    <text x="54" y="126" fill="#edf4ff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20" font-weight="700">High contrast</text>
+    <text x="54" y="154" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="16">CVI-friendly view for low glare</text>
+    <circle cx="332" cy="130" r="20" fill="#6ee7d8"/>
+    <rect x="28" y="194" width="348" height="88" rx="22" fill="rgba(255,255,255,0.04)"/>
+    <text x="54" y="234" fill="#edf4ff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20" font-weight="700">Highlight scanning</text>
+    <text x="54" y="262" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="16">Step through tiles with visual cues</text>
+    <circle cx="332" cy="238" r="20" fill="#ffcb6b"/>
+    <rect x="28" y="302" width="348" height="88" rx="22" fill="rgba(255,255,255,0.04)"/>
+    <text x="54" y="342" fill="#edf4ff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20" font-weight="700">Cream background</text>
+    <text x="54" y="370" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="16">Reduce glare and visual fatigue</text>
+    <circle cx="332" cy="346" r="20" fill="#87a7ff"/>
+    <rect x="28" y="410" width="348" height="88" rx="22" fill="rgba(255,255,255,0.04)"/>
+    <text x="54" y="450" fill="#edf4ff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20" font-weight="700">Font and spacing</text>
+    <text x="54" y="478" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="16">Make boards easier to read and tap</text>
+    <circle cx="332" cy="454" r="20" fill="#ff8f70"/>
+  </g>
+  <g transform="translate(536 76)">
+    <rect width="586" height="744" rx="30" fill="rgba(255,255,255,0.05)"/>
+    <rect x="34" y="34" width="518" height="120" rx="26" fill="#172848"/>
+    <text x="66" y="84" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="28" font-weight="700">Speak with one tap</text>
+    <text x="66" y="120" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">The message bar stays in the same place across boards.</text>
+    <g transform="translate(34 186)">
+      <rect width="238" height="138" rx="26" fill="rgba(110,231,216,0.16)"/>
+      <rect x="280" width="238" height="138" rx="26" fill="rgba(255,203,107,0.16)"/>
+      <rect y="166" width="238" height="138" rx="26" fill="rgba(255,255,255,0.05)"/>
+      <rect x="280" y="166" width="238" height="138" rx="26" fill="rgba(255,255,255,0.05)"/>
+      <rect y="332" width="238" height="138" rx="26" fill="rgba(255,255,255,0.05)"/>
+      <rect x="280" y="332" width="238" height="138" rx="26" fill="rgba(135,167,255,0.16)"/>
+      <text x="44" y="82" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="24" font-weight="700">yes</text>
+      <text x="314" y="82" fill="#edf4ff" font-family="Space Grotesk, Arial, sans-serif" font-size="24" font-weight="700">no</text>
+      <text x="34" y="248" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">more</text>
+      <text x="314" y="248" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">help</text>
+      <text x="34" y="414" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">home</text>
+      <text x="314" y="414" fill="#a8b8d6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">school</text>
+    </g>
+  </g>
+</svg>

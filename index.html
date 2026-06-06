@@ -1,18 +1,271 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/AAC-Website/assets/favicon-17e50649-17e50649.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    
-    
-    <script type="module" crossorigin src="/AAC-Website/assets/index-dacb1543.js"></script>
-    <link rel="stylesheet" href="/AAC-Website/assets/index-471f76b9.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a1222" />
+    <meta
+      name="description"
+      content="AAC Speech & Communication is an offline AAC board app for nonverbal individuals and people with speech challenges. Build sentences, use symbol boards, and unlock premium features with a one-time payment."
+    />
+    <meta
+      name="keywords"
+      content="AAC app, communication board, nonverbal communication, offline AAC, text to speech, symbol board, autism AAC, aphasia AAC, speech therapy app"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AAC Speech & Communication" />
+    <meta property="og:title" content="AAC Speech & Communication" />
+    <meta
+      property="og:description"
+      content="Offline AAC boards, natural Android text-to-speech, custom symbol grids, and one-time premium unlocks for home, school, therapy, and everyday communication."
+    />
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/" />
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AAC Speech & Communication" />
+    <meta
+      name="twitter:description"
+      content="A one-page, SEO-friendly AAC app website with screenshots, features, and a Google Play link."
+    />
+    <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.png" />
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/icon.png" />
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/icon.png" />
+    <title>AAC Speech & Communication | Offline AAC Board App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AAC Speech & Communication",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Android",
+        "description": "An offline AAC board app with symbol boards, natural text-to-speech, custom boards, accessibility tools, and a one-time premium unlock.",
+        "image": "{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Offline communication boards",
+          "Natural Android text-to-speech",
+          "Custom boards and folder navigation",
+          "Printable PDF exports",
+          "Premium cloud sync and smart board creation"
+        ]
+      }
+    </script>
   </head>
-  <body class="font-inter antialiased bg-gray-900 text-gray-200 tracking-tight">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    
+  <body>
+    <div class="bg-orb bg-orb-a" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-b" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="shell header-bar">
+        <a class="brand" href="#top" aria-label="AAC Speech & Communication home">
+          <span class="brand-mark">
+            <img src="{{ site.baseurl }}/assets/icon.png" alt="" aria-hidden="true" />
+          </span>
+          <span class="brand-copy">
+            <strong>AAC Speech & Communication</strong>
+            <span>Offline communication boards</span>
+          </span>
+        </a>
+        <nav class="header-nav" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#screenshots">Screenshots</a>
+          <a href="#premium">Premium</a>
+          <a class="nav-cta" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer">
+            Google Play
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <div class="eyebrow">Give a voice. Empower communication.</div>
+          <h1>A powerful AAC board app built for real-life communication.</h1>
+          <p class="lede">
+            Create and use symbol boards with pictures, text, voice clips, and natural Android
+            text-to-speech, fully offline and designed for home, school, therapy, and everyday use.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer">
+              View on Google Play
+            </a>
+            <a class="button button-secondary" href="#screenshots">See screenshots</a>
+          </div>
+          <ul class="hero-points" aria-label="Highlights">
+            <li>Fully offline</li>
+            <li>No subscription</li>
+            <li>Built for accessibility</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="App preview">
+          <div class="hero-art">
+            <img
+              src="{{ site.baseurl }}/assets/featureGraphic.png"
+              alt="AAC Speech & Communication feature graphic showing the app logo and tagline"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="shell trust-row" aria-label="App benefits">
+        <div class="trust-pill">Autism</div>
+        <div class="trust-pill">Aphasia</div>
+        <div class="trust-pill">ALS / MND</div>
+        <div class="trust-pill">Stroke recovery</div>
+        <div class="trust-pill">Cerebral palsy</div>
+      </section>
+
+      <section class="shell section" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">Core features</p>
+          <h2>Everything needed for fast, clear AAC support.</h2>
+          <p>
+            The free version gives you the essentials. Premium adds the advanced tools for faster
+            setup, more flexibility, and cross-device workflows.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Communication grids</h3>
+            <p>Use symbols, photos, voice clips, and text inside intuitive boards that are easy to model.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Sentence building</h3>
+            <p>Tap tiles to build and speak sentences instantly with clear message bar placement.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Ready-made topics</h3>
+            <p>Start quickly with emotions, food, school, daily activities, and other practical boards.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Custom boards</h3>
+            <p>Create and edit up to 3 boards in the free version, then unlock unlimited boards with Premium.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Symbol library</h3>
+            <p>Search thousands of Mulberry SVG symbols, or add your own photos, icons, and recorded audio.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Accessibility tools</h3>
+            <p>Adjust fonts and spacing, use highlight scanning, switch to cream background, or enable high-contrast mode.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="shell section screenshots" id="screenshots">
+        <div class="section-heading">
+          <p class="eyebrow">Screenshots</p>
+          <h2>Promo screenshots that explain the app instantly.</h2>
+          <p>
+            These promo images show the core experience, custom boards, symbol search, and smart board creation in a way
+            that is easy to understand at a glance.
+          </p>
+        </div>
+
+        <div class="shot-grid">
+          <figure class="shot-card">
+            <img src="{{ site.baseurl }}/assets/PhonePromo1.png" alt="Promo screenshot showing simple, powerful communication with a live AAC board preview" />
+            <figcaption>Simple, powerful communication with an instant board preview.</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="{{ site.baseurl }}/assets/PhonePromo2.png" alt="Promo screenshot showing custom board creation and editing tools" />
+            <figcaption>Build fully custom boards with fast editing controls.</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="{{ site.baseurl }}/assets/PhonePromo3.png" alt="Promo screenshot showing symbol search across thousands of icons" />
+            <figcaption>Search thousands of symbols instantly when you need them.</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="{{ site.baseurl }}/assets/PhonePromo4.png" alt="Promo screenshot showing smart board creator auto-cropping photos into grids" />
+            <figcaption>Smart Board Creator auto-crops photos into usable grids.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="shell section" id="premium">
+        <div class="premium-panel">
+          <div class="section-heading section-heading-tight">
+            <p class="eyebrow">Premium</p>
+            <h2>One-time unlock. No subscription. All future updates included.</h2>
+            <p>
+              Pay once and keep everything: unlimited boards, cloud sync, multiple profiles, camera scan, gallery import,
+              and the standout smart board creator.
+            </p>
+          </div>
+
+          <div class="premium-grid">
+            <div class="premium-column">
+              <h3>Free version</h3>
+              <ul>
+                <li>Up to 3 custom boards</li>
+                <li>Topic boards and symbol library</li>
+                <li>Voice clips, photos, and text</li>
+                <li>Printable PDF exports</li>
+              </ul>
+            </div>
+            <div class="premium-column premium-featured">
+              <h3>Premium unlock</h3>
+              <ul>
+                <li>Unlimited custom boards</li>
+                <li>Cloud sync and multiple profiles</li>
+                <li>Camera scan and gallery import</li>
+                <li>Smart board creator with manual adjustment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell section" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow">Why it matters</p>
+          <h2>Built for parents, therapists, teachers, and caregivers.</h2>
+          <p>
+            This app helps you start with core words, use templates for quick wins, and digitize paper-based systems
+            without needing an internet connection.
+          </p>
+        </div>
+
+        <div class="quote-panel">
+          <p>
+            “A simple, powerful AAC board for people who need communication to be fast, visual, and dependable.”
+          </p>
+        </div>
+      </section>
+
+      <section class="shell cta-banner" aria-label="Download call to action">
+        <div>
+          <p class="eyebrow">Ready to download?</p>
+          <h2>Start with the free AAC tools, then unlock the advanced workflow when you need it.</h2>
+        </div>
+        <a class="button button-primary" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer">
+          Open Google Play
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <p>© AAC Speech & Communication. Offline AAC support for everyday communication.</p>
+      <a href="#top">Back to top</a>
+    </footer>
   </body>
 </html>
