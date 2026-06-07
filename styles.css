@@ -765,7 +765,6 @@ html[data-theme="light"] .carousel-dot {
   width: 100%;
   max-height: 82vh;
   object-fit: contain;
-  border-radius: 22px;
   background: #050913;
   box-shadow: var(--shadow);
 }
