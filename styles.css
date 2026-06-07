@@ -34,16 +34,147 @@ html[data-theme="light"] {
   --shadow: 0 24px 70px rgba(16, 24, 40, 0.12);
 }
 
-/* Add a scroll margin buffer equal to or slightly larger than the mobile/desktop navbar heights */
-section[id], 
-main[id] {
-  scroll-margin-top: 90px;
+/* --- Premium Header Container --- */
+.premium-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.premium-header h3 {
+  margin: 0;
+}
+
+.badge-standout {
+  background: var(--accent-2);
+  color: #04101a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* --- Mobile Specific Refinements --- */
+@media (max-width: 720px) {
+  /* Forces the header title and badge to stay aligned on a single row */
+  .premium-header {
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .premium-header h3 {
+    font-size: 1.2rem; /* Tightens the font sizing so it never forces a wrap */
+  }
+
+  .badge-standout {
+    font-size: 0.65rem; /* Scales the badge down appropriately for smaller mobile viewports */
+    padding: 0.2rem 0.55rem;
+  }
+
+  .shot-grid {
+    display: flex !important;           /* Switch from grid to a single horizontal row */
+    overflow-x: auto;                  /* Enable native horizontal swiping/scrolling */
+    scroll-snap-type: x mandatory;     /* Force smooth snapping onto cards when swiping */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Butter-smooth scrolling performance on iOS */
+    gap: 1rem;
+    padding: 0.5rem 0.25rem 1.5rem;   /* Bottom padding keeps the custom card shadow safe */
+    
+    /* Hide default browser scrollbars while keeping swipe functionality active */
+    scrollbar-width: none;             /* Firefox */
+  }
+
+  .shot-grid::-webkit-scrollbar {
+    display: none;                     /* Chrome, Safari, and Opera */
+  }
+
+  .shot-card {
+    flex: 0 0 82%;                     /* Show 82% of the card, revealing a peek of the next one */
+    scroll-snap-align: center;         /* Snaps perfectly to the center of the mobile screen */
+    margin: 0;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0 0 1rem;
+    
+    padding: 0.25rem 0.75rem; 
+    
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--brand);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+  }
+
+  /* 1. Force download badges to sit neatly side-by-side */
+  .store-badge-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  .store-badge {
+    height: 48px; /* Slightly scale down badge height to guarantee they fit side-by-side */
+    width: auto;
+  }
+
+  /* 2. Style the actions block to expand gracefully */
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .hero-actions .button-secondary {
+    width: 100%;
+    max-width: 320px; /* Restricts button size on wide mobile screens */
+    text-align: center;
+  }
+
+  /* 3. Reformat the highlights list so it doesn't leave floating single pills */
+  .hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .hero-points li {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    white-space: nowrap;
+  }
+}
+
+/* Guarantees clean breathing room when users jump down the page via anchor links */
+.section[id] {
+  scroll-margin-top: 110px !important;
 }
 
 @media (max-width: 720px) {
-  section[id], 
-  main[id] {
-    scroll-margin-top: 72px; /* Tighter padding offset for the optimized mobile layout header */
+  .section[id] {
+    scroll-margin-top: 10px !important; /* Calibrates perfectly for the tighter 60px mobile navbar */
+  }
+  #top
+  {
+    scroll-margin-top: 72px !important;
   }
 }
 
@@ -209,7 +340,6 @@ html[data-theme="light"] .theme-toggle {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.05);
   color: var(--text);
-  cursor: pointer;
   
   /* Layout context for absolute positioning inside */
   position: relative; 
@@ -610,7 +740,7 @@ html[data-theme="light"] .carousel-dot {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 2rem 0;
 }
 
 .section-heading {
