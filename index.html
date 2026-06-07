@@ -86,8 +86,33 @@ layout: null
           <a href="#features">Features</a>
           <a href="#screenshots">Screenshots</a>
           <a href="#premium">Premium</a>
-          <a class="nav-cta" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer">
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-pressed="false"
+            aria-label="Switch to light mode"
+            title="Switch to light mode"
+          >
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3 7.1 7.1 0 0 0 21 13.2Z" />
+            </svg>
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 1.8v2.4M12 19.8v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" />
+            </svg>
+          </button>
+          <a class="store-badge-link header-store-link" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer" aria-label="Open on Google Play">
+            <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/google-play-badge.png" alt="Get it on Google Play" />
+          </a>
+          <a class="header-store-text" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer">
             Google Play
+          </a>
+          <a class="store-badge-link header-store-link" href="{{ site.amazon_url }}" target="_blank" rel="noreferrer" aria-label="Open on Amazon">
+            <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/amazon-badge.png" alt="Available at Amazon" />
+          </a>
+          <a class="header-store-text" href="{{ site.amazon_url }}" target="_blank" rel="noreferrer">
+            Amazon
           </a>
         </nav>
       </div>
@@ -96,15 +121,26 @@ layout: null
     <main id="top">
       <section class="hero shell">
         <div class="hero-copy">
-          <div class="eyebrow">Give a voice. Empower communication.</div>
-          <h1>A powerful AAC board app built for real-life communication.</h1>
+          <div class="eyebrow">OFFLINE & ACCESSIBLE</div>
+          <h1>A Powerful AAC Speech App Built for Real-Life.</h1>
           <p class="lede">
             Create and use symbol boards with pictures, text, voice clips, and natural Android
             text-to-speech, fully offline and designed for home, school, therapy, and everyday use.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer">
-              View on Google Play
+            <a class="store-badge-link" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer" aria-label="Open on Google Play">
+              <img
+                class="store-badge"
+                src="{{ site.baseurl }}/assets/google-play-badge.png"
+                alt="Get it on Google Play"
+              />
+            </a>
+            <a class="store-badge-link" href="{{ site.amazon_url }}" target="_blank" rel="noreferrer" aria-label="Open on Amazon">
+              <img
+                class="store-badge"
+                src="{{ site.baseurl }}/assets/amazon-badge.png"
+                alt="Available at Amazon"
+              />
             </a>
             <a class="button button-secondary" href="#screenshots">See screenshots</a>
           </div>
@@ -116,11 +152,34 @@ layout: null
         </div>
 
         <div class="hero-visual" aria-label="App preview">
-          <div class="hero-art">
-            <img
-              src="{{ site.baseurl }}/assets/featureGraphic.png"
-              alt="AAC Speech & Communication feature graphic showing the app logo and tagline"
-            />
+          <div class="hero-carousel" data-carousel data-start="0">
+            <div class="carousel-frame">
+              <div class="carousel-slides">
+                <button class="carousel-slide" type="button" data-slide data-fullscreen-src="{{ site.baseurl }}/assets/GridDark.png" data-fullscreen-alt="Landscape screenshot of the AAC board showing communication tiles and message bar" data-theme-src-dark="{{ site.baseurl }}/assets/GridDark.png" data-theme-src-light="{{ site.baseurl }}/assets/GridLight.png">
+                  <img src="{{ site.baseurl }}/assets/GridDark.png" alt="Landscape screenshot of the AAC board showing communication tiles and message bar" />
+                </button>
+                <button class="carousel-slide" type="button" data-slide data-fullscreen-src="{{ site.baseurl }}/assets/EditBoardDark.png" data-fullscreen-alt="Promo screenshot of the smart board creator auto-cropping photos into grids" data-theme-src-dark="{{ site.baseurl }}/assets/EditBoardDark.png" data-theme-src-light="{{ site.baseurl }}/assets/EditBoardLight.png">
+                  <img src="{{ site.baseurl }}/assets/EditBoardDark.png" alt="Promo screenshot of the smart board creator auto-cropping photos into grids" />
+                </button>
+                <button class="carousel-slide" type="button" data-slide data-fullscreen-src="{{ site.baseurl }}/assets/NewBoardDark.png" data-fullscreen-alt="Promo screenshot of the smart board creator auto-cropping photos into grids" data-theme-src-dark="{{ site.baseurl }}/assets/NewBoardDark.png" data-theme-src-light="{{ site.baseurl }}/assets/NewBoardLight.png">
+                  <img src="{{ site.baseurl }}/assets/NewBoardDark.png" alt="Promo screenshot of the smart board creator auto-cropping photos into grids" />
+                </button>
+                <button class="carousel-slide" type="button" data-slide data-fullscreen-src="{{ site.baseurl }}/assets/featureGraphic.png" data-fullscreen-alt="AAC Speech & Communication feature graphic showing the app logo and tagline" data-theme-src-dark="{{ site.baseurl }}/assets/featureGraphic.png" data-theme-src-light="{{ site.baseurl }}/assets/featureGraphic.png">
+                  <img src="{{ site.baseurl }}/assets/featureGraphic.png" alt="AAC Speech & Communication feature graphic showing the app logo and tagline" />
+                </button>
+              </div>
+            </div>
+            <div class="carousel-controls" aria-label="Carousel controls">
+              <button class="carousel-nav" type="button" data-prev aria-label="Previous image">Previous</button>
+              <div class="carousel-dots" role="tablist" aria-label="Hero images">
+                <button class="carousel-dot" type="button" data-dot aria-label="Show image 1"></button>
+                <button class="carousel-dot" type="button" data-dot aria-label="Show image 2"></button>
+                <button class="carousel-dot" type="button" data-dot aria-label="Show image 3"></button>
+                <button class="carousel-dot" type="button" data-dot aria-label="Show image 4"></button>
+              </div>
+              <button class="carousel-nav" type="button" data-next aria-label="Next image">Next</button>
+            </div>
+            <p class="carousel-hint">Tap the image on mobile to view it full screen.</p>
           </div>
         </div>
       </section>
@@ -172,14 +231,14 @@ layout: null
       </section>
 
       <section class="shell section screenshots" id="screenshots">
-        <div class="section-heading">
-          <p class="eyebrow">Screenshots</p>
-          <h2>Promo screenshots that explain the app instantly.</h2>
-          <p>
-            These promo images show the core experience, custom boards, symbol search, and smart board creation in a way
-            that is easy to understand at a glance.
-          </p>
-        </div>
+      <div class="section-heading">
+        <p class="eyebrow">Screenshots</p>
+        <h2>See the app in action.</h2>
+        <p>
+          Take a closer look at the simple interface, quick editing workflows, and 
+          accessible layout tools built to support effortless daily communication.
+        </p>
+      </div>
 
         <div class="shot-grid">
           <figure class="shot-card">
@@ -257,9 +316,22 @@ layout: null
           <p class="eyebrow">Ready to download?</p>
           <h2>Start with the free AAC tools, then unlock the advanced workflow when you need it.</h2>
         </div>
-        <a class="button button-primary" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer">
-          Open Google Play
-        </a>
+        <div class="store-badge-row">
+          <a class="store-badge-link" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer" aria-label="Open on Google Play">
+          <img
+            class="store-badge"
+            src="{{ site.baseurl }}/assets/google-play-badge.png"
+            alt="Get it on Google Play"
+          />
+          </a>
+          <a class="store-badge-link" href="{{ site.amazon_url }}" target="_blank" rel="noreferrer" aria-label="Open on Amazon">
+            <img
+              class="store-badge"
+              src="{{ site.baseurl }}/assets/amazon-badge.png"
+              alt="Available at Amazon"
+            />
+          </a>
+        </div>
       </section>
     </main>
 
@@ -267,5 +339,142 @@ layout: null
       <p>© AAC Speech & Communication. Offline AAC support for everyday communication.</p>
       <a href="#top">Back to top</a>
     </footer>
+
+    <dialog class="fullscreen-viewer" data-fullscreen>
+      <button class="fullscreen-close" type="button" data-close aria-label="Close full screen view">Close</button>
+      <img src="" alt="" />
+    </dialog>
+
+    <script>
+      (() => {
+        const themeToggle = document.querySelector('[data-theme-toggle]');
+        const carousel = document.querySelector('[data-carousel]');
+        const fullscreen = document.querySelector('[data-fullscreen]');
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+        if (!themeToggle || !carousel || !fullscreen) {
+          return;
+        }
+
+        const defaultTheme = 'dark';
+        const themeKey = 'aac-theme';
+        const slides = Array.from(carousel.querySelectorAll('[data-slide]'));
+        const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
+        const prevButton = carousel.querySelector('[data-prev]');
+        const nextButton = carousel.querySelector('[data-next]');
+        const fullscreenImage = fullscreen.querySelector('img');
+        const closeButton = fullscreen.querySelector('[data-close]');
+        let currentIndex = Number(carousel.dataset.start || 0);
+        let currentTheme = localStorage.getItem(themeKey) || defaultTheme;
+
+        function setTheme(theme) {
+          currentTheme = theme === 'light' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = currentTheme;
+          localStorage.setItem(themeKey, currentTheme);
+          themeToggle.setAttribute(
+            'aria-label',
+            currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+          );
+          themeToggle.setAttribute(
+            'title',
+            currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+          );
+          themeToggle.setAttribute('aria-pressed', String(currentTheme === 'light'));
+          if (themeColorMeta) {
+            themeColorMeta.setAttribute('content', currentTheme === 'dark' ? '#0a1222' : '#f7f9fc');
+          }
+
+          slides.forEach((slide) => {
+            const image = slide.querySelector('img');
+            const nextSrc =
+              currentTheme === 'light'
+                ? slide.dataset.themeSrcLight || slide.dataset.themeSrcDark || image.src
+                : slide.dataset.themeSrcDark || image.src;
+            if (image && image.src !== nextSrc) {
+              image.src = nextSrc;
+            }
+            slide.dataset.fullscreenSrc = nextSrc;
+          });
+        }
+
+        function render() {
+          slides.forEach((slide, slideIndex) => {
+            const isActive = slideIndex === currentIndex;
+            slide.classList.toggle('is-active', isActive);
+            slide.setAttribute('aria-hidden', String(!isActive));
+            slide.tabIndex = isActive ? 0 : -1;
+          });
+
+          dots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === currentIndex;
+            dot.classList.toggle('is-active', isActive);
+            dot.setAttribute('aria-pressed', String(isActive));
+          });
+        }
+
+        function goTo(index) {
+          currentIndex = (index + slides.length) % slides.length;
+          render();
+        }
+
+        function openFullscreen(src, alt) {
+          fullscreenImage.src = src;
+          fullscreenImage.alt = alt;
+          if (typeof fullscreen.showModal === 'function') {
+            fullscreen.showModal();
+          } else {
+            fullscreen.setAttribute('open', '');
+          }
+        }
+
+        function closeFullscreen() {
+          if (typeof fullscreen.close === 'function') {
+            fullscreen.close();
+          } else {
+            fullscreen.removeAttribute('open');
+          }
+          fullscreenImage.src = '';
+          fullscreenImage.alt = '';
+        }
+
+        slides.forEach((slide) => {
+          slide.addEventListener('click', () => {
+            openFullscreen(slide.dataset.fullscreenSrc, slide.dataset.fullscreenAlt || '');
+          });
+        });
+
+        dots.forEach((dot, dotIndex) => {
+          dot.addEventListener('click', () => goTo(dotIndex));
+        });
+
+        prevButton?.addEventListener('click', () => goTo(currentIndex - 1));
+        nextButton?.addEventListener('click', () => goTo(currentIndex + 1));
+        closeButton?.addEventListener('click', closeFullscreen);
+        themeToggle.addEventListener('click', () => {
+          setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        fullscreen.addEventListener('click', (event) => {
+          if (event.target === fullscreen) {
+            closeFullscreen();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (fullscreen.open && event.key === 'Escape') {
+            closeFullscreen();
+          }
+          if (event.key === 'ArrowLeft') {
+            goTo(currentIndex - 1);
+          }
+          if (event.key === 'ArrowRight') {
+            goTo(currentIndex + 1);
+          }
+        });
+
+        setTheme(currentTheme);
+        render();
+      })();
+    </script>
   </body>
 </html>
