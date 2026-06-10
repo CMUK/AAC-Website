@@ -42,13 +42,19 @@ layout: null
         "name": "AAC Speech & Communication",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "Android",
+        "sameAs": [    
+          "https://play.google.com/store/apps/details?id=com.cm.aac",
+          "https://www.amazon.com/gp/product/CMUK-AAC-Speech-Communication/dp/B0GJTDZ4CJ"
+        ],
         "description": "An offline AAC board app with symbol boards, natural text-to-speech, custom boards, accessibility tools, and a one-time premium unlock.",
         "image": "{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.png",
         "offers": {
           "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
+          "price": "0.00",
+          "priceCurrency": "USD",
+          "description": "Free to download with a one-time premium unlock available in-app."
         },
+        "downloadUrl": "{{ site.google_play_url }}",
         "featureList": [
           "Offline visual communication boards",
           "Natural voice Android text-to-speech",
