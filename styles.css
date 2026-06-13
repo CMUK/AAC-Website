@@ -4,11 +4,11 @@
   --bg-soft: rgba(13, 24, 42, 0.82);
   --panel: rgba(15, 28, 49, 0.9);
   --panel-strong: rgba(18, 35, 61, 0.98);
-  --line: rgba(170, 203, 255, 0.16);
-  --text: #edf4ff;
-  --muted: #a8b8d6;
-  --brand: #6ee7d8;
-  --brand-2: #87a7ff;
+  --line: rgba(170, 203, 255, 0.22); /* Sharpened boundaries */
+  --text: #ffffff; /* Maximum crisp readability */
+  --muted: #b9c9e6; /* Brightened from #a8b8d6 for accessible contrast */
+  --brand: #7bfcee; /* Vibrancy boost for small icons */
+  --brand-2: #9cb8ff;
   --accent: #ffcb6b;
   --accent-2: #ff8f70;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
@@ -24,15 +24,17 @@ html[data-theme="light"] {
   --bg-soft: rgba(255, 255, 255, 0.82);
   --panel: rgba(255, 255, 255, 0.88);
   --panel-strong: rgba(255, 255, 255, 0.96);
-  --line: rgba(16, 24, 40, 0.08);
-  --text: #101827;
-  --muted: #526079;
-  --brand: #087d70;
-  --brand-2: #4b74f2;
-  --accent: #ffcb6b;
-  --accent-2: #ff8f70;
+  --line: rgba(16, 24, 40, 0.12); /* Higher baseline border definition */
+  --text: #0f1622; /* Deepened body color */
+  --muted: #47546b; /* Darkened from #526079 for strict WCAG compliance */
+  --brand: #056b60;
+  --brand-2: #305be3;
+  --accent: #e09600;
+  --accent-2: #de5631;
   --shadow: 0 24px 70px rgba(16, 24, 40, 0.12);
 }
+
+
 
 /* --- Premium Header Container --- */
 .premium-header {
@@ -57,6 +59,15 @@ html[data-theme="light"] {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+
+/* --- Light Mode Contrast Fix for "No Subscription" Pill --- */
+
+html[data-theme="light"] .eyebrow-accent {
+  background: rgba(235, 94, 40, 0.12) !important; /* Slightly richer tint backdrop */
+  color: #bf3a13 !important; /* Deeper, high-contrast text color for visibility */
+  border-color: rgba(235, 94, 40, 0.25) !important;
 }
 
 /* --- Mobile Specific Refinements --- */
@@ -132,12 +143,19 @@ html[data-theme="light"] {
   }
 
   /* 2. Style the actions block to expand gracefully */
-  .hero-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.hero-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
     gap: 0.75rem;
     margin: 1.5rem 0;
+    width: 100%;
+  }
+
+  /* Force sizing on the specific hero area badges */
+  .hero-store-badge {
+    height: 48px !important;
+    width: auto !important;
   }
 
   .hero-actions .button-secondary {
@@ -592,12 +610,6 @@ h3 {
 
 .carousel-frame {
   position: relative;
-  padding: 1rem;
-  border-radius: 36px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  overflow: hidden;
 }
 
 html[data-theme="light"] .carousel-frame,
@@ -663,7 +675,7 @@ html[data-theme="light"] .carousel-slides {
 
 .carousel-slide img {
   width: 100%;
-  height: 100%;
+  height: 95%;
   object-fit: contain;
   object-position: center;
   border-radius: 24px;
@@ -675,30 +687,65 @@ html[data-theme="light"] .carousel-slide img {
   background: #fff;
 }
 
+/* --- Active Pagination Dot Glow Flare --- */
+
+.carousel-dot.is-active {
+  width: 2rem;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  box-shadow: 0 0 12px 2px rgba(110, 231, 216, 0.5); /* Creates a vibrant cyan glow flare matching your orb backgrounds */
+  transition: width 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carousel-frame {
+  position: relative; /* Anchor for our invisible split panels */
+  padding: 1rem;
+  border-radius: 36px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
 .carousel-controls {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-top: 0.9rem;
+  justify-content: center; /* Keeps indicator dots perfectly centered */
+  margin-top: 1.25rem;
 }
 
+/* Strip all visual styling but keep structural layout dimensions */
 .carousel-nav {
-  min-width: 92px;
-  min-height: 42px;
-  padding: 0.65rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text);
-  font: inherit;
-  font-weight: 600;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+width: 35%;
+  z-index: 10;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* Removes blue flash on mobile tap */
 }
 
-html[data-theme="light"] .carousel-nav {
-  border-color: rgba(16, 24, 40, 0.1);
-  background: rgba(255, 255, 255, 0.82);
+/* Left side click zone*/
+.nav-left {
+  left: 0;
 }
+
+/* Right side click zone */
+.nav-right {
+  right: 0;
+}
+
+
+/* Ensure no visual changes happen on theme switches since they are invisible */
+html[data-theme="light"] .carousel-nav {
+  background: transparent;
+  border: none;
+}
+
 
 .carousel-dots {
   display: flex;
@@ -1094,17 +1141,45 @@ html[data-theme="light"] .fullscreen-close {
     gap: 0.45rem;
   }
 
-  .carousel-nav {
-    min-width: 76px;
-    padding-inline: 0.75rem;
-  }
-
   .carousel-hint {
     font-size: 0.88rem;
   }
 
   .store-badge {
     height: 52px;
+  }
+
+  /* Separate the elements to allow individual alignment configurations */
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* --- Reconfigured Bottom Banner Row Layout Context --- */
+  .cta-banner {
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+    padding: 2.25rem 1.25rem !important;
+  }
+
+  .cta-banner .store-badge-row {
+    display: flex !important;
+    flex-direction: row !important; /* Force side-by-side presentation */
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    margin-top: 1.5rem;
+  }
+
+  .cta-banner .store-badge-link {
+    display: inline-block !important;
+    flex: 0 1 auto !important;
+  }
+
+  .cta-banner .store-badge {
+    height: 46px !important; /* Scaled to drop cleanly into tight viewports */
+    width: auto !important;
   }
 }
 

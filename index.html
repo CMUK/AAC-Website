@@ -34,7 +34,7 @@ layout: null
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css" />
   <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -75,7 +75,7 @@ layout: null
     <div class="shell header-bar">
       <a class="brand" href="#top" aria-label="AAC Speech & Communication home">
         <span class="brand-mark">
-          <img src="{{ site.baseurl }}/assets/icon.png" alt="" aria-hidden="true" />
+          <img src="{{ site.baseurl }}/assets/icon.png" alt="AAC Speech & Communication logo" aria-hidden="true" />
         </span>
         <span class="brand-copy">
           <strong>AAC Speech & Communication</strong>
@@ -97,20 +97,20 @@ layout: null
               d="M12 1.8v2.4M12 19.8v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" />
           </svg>
         </button>
-        <a class="store-badge-link header-store-link" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer"
+        <a class="store-badge-link header-store-link" href="{{ site.google_play_url }}" target="_blank" rel="noopener"
           aria-label="Open on Google Play">
           <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/google-play-badge.png"
             alt="Get it on Google Play" />
         </a>
-        <a class="header-store-text" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer">
+        <a class="header-store-text" href="{{ site.google_play_url }}" target="_blank" rel="noopener">
           Google Play
         </a>
-        <a class="store-badge-link header-store-link" href="{{ site.amazon_url }}" target="_blank" rel="noreferrer"
+        <a class="store-badge-link header-store-link" href="{{ site.amazon_url }}" target="_blank" rel="noopener"
           aria-label="Open on Amazon">
           <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/amazon-badge.png"
             alt="Available at Amazon" />
         </a>
-        <a class="header-store-text" href="{{ site.amazon_url }}" target="_blank" rel="noreferrer">
+        <a class="header-store-text" href="{{ site.amazon_url }}" target="_blank" rel="noopener">
           Amazon
         </a>
       </nav>
@@ -120,28 +120,37 @@ layout: null
   <main id="top">
     <section class="hero shell">
       <div class="hero-copy">
-        <div class="eyebrow">OFFLINE & ACCESSIBLE</div>
+        <!-- Dual Pill Layout highlighting the value proposition -->
+        <div class="eyebrow-row" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+          <div class="eyebrow" style="margin: 0;">OFFLINE & ACCESSIBLE</div>
+          <div class="eyebrow eyebrow-accent"
+            style="margin: 0; background: rgba(255, 143, 112, 0.1); color: var(--accent-2); border-color: rgba(255, 143, 112, 0.2);">
+            NO SUBSCRIPTION</div>
+        </div>
+
         <h1>A Simple, Powerful Offline AAC Board for Speech Challenges</h1>
         <p class="lede">
           Create and edit personalized symbol grids using voice clips, images, and natural Android text-to-speech. Built
           entirely offline for parents, teachers, and speech and language therapists (SLTs) supporting nonverbal
           communication.
         </p>
+
         <div class="hero-actions">
-          <a class="store-badge-link" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer"
+          <a class="store-badge-link" href="{{ site.google_play_url }}" target="_blank" rel="noopener"
             aria-label="Open on Google Play">
-            <img class="store-badge" src="{{ site.baseurl }}/assets/google-play-badge.png"
+            <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/google-play-badge.png"
               alt="Get it on Google Play" />
           </a>
-          <a class="store-badge-link" href="{{ site.amazon_url }}" target="_blank" rel="noreferrer"
+          <a class="store-badge-link" href="{{ site.amazon_url }}" target="_blank" rel="noopener"
             aria-label="Open on Amazon">
-            <img class="store-badge" src="{{ site.baseurl }}/assets/amazon-badge.png" alt="Available at Amazon" />
+            <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/amazon-badge.png"
+              alt="Available at Amazon" />
           </a>
-          <a class="button button-secondary" href="#screenshots">See screenshots</a>
         </div>
+
         <ul class="hero-points" aria-label="Highlights">
           <li>Fully offline</li>
-          <li>No subscription</li>
+          <li>One-time premium unlock</li>
           <li>Built for accessibility</li>
         </ul>
       </div>
@@ -149,6 +158,10 @@ layout: null
       <div class="hero-visual" aria-label="App preview">
         <div class="hero-carousel" data-carousel data-start="0">
           <div class="carousel-frame">
+            <!-- Floating Chevron Controls -->
+            <button class="carousel-nav nav-left" type="button" data-prev aria-label="Previous image"></button>
+            <button class="carousel-nav nav-right" type="button" data-next aria-label="Next image"></button>
+
             <div class="carousel-slides">
               <button class="carousel-slide" type="button" data-slide
                 data-fullscreen-src="{{ site.baseurl }}/assets/GridDark.png"
@@ -184,15 +197,15 @@ layout: null
               </button>
             </div>
           </div>
+
+          <!-- Clean indicator alignment row -->
           <div class="carousel-controls" aria-label="Carousel controls">
-            <button class="carousel-nav" type="button" data-prev aria-label="Previous image">Previous</button>
             <div class="carousel-dots" role="tablist" aria-label="Hero images">
               <button class="carousel-dot" type="button" data-dot aria-label="Show image 1"></button>
               <button class="carousel-dot" type="button" data-dot aria-label="Show image 2"></button>
               <button class="carousel-dot" type="button" data-dot aria-label="Show image 3"></button>
               <button class="carousel-dot" type="button" data-dot aria-label="Show image 4"></button>
             </div>
-            <button class="carousel-nav" type="button" data-next aria-label="Next image">Next</button>
           </div>
         </div>
       </div>
@@ -415,11 +428,11 @@ layout: null
         <h2>Start with the free AAC tools, then unlock the advanced workflow when you need it.</h2>
       </div>
       <div class="store-badge-row">
-        <a class="store-badge-link" href="{{ site.google_play_url }}" target="_blank" rel="noreferrer"
+        <a class="store-badge-link" href="{{ site.google_play_url }}" target="_blank" rel="noopener"
           aria-label="Open on Google Play">
           <img class="store-badge" src="{{ site.baseurl }}/assets/google-play-badge.png" alt="Get it on Google Play" />
         </a>
-        <a class="store-badge-link" href="{{ site.amazon_url }}" target="_blank" rel="noreferrer"
+        <a class="store-badge-link" href="{{ site.amazon_url }}" target="_blank" rel="noopener"
           aria-label="Open on Amazon">
           <img class="store-badge" src="{{ site.baseurl }}/assets/amazon-badge.png" alt="Available at Amazon" />
         </a>
@@ -434,7 +447,7 @@ layout: null
 
   <dialog class="fullscreen-viewer" data-fullscreen>
     <button class="fullscreen-close" type="button" data-close aria-label="Close full screen view">Close</button>
-    <img src="" alt="" />
+    <img src="" alt="Expanded full screen application preview" />
   </dialog>
 
   <script>
