@@ -44,7 +44,7 @@ layout: null
         "operatingSystem": "Android",
         "sameAs": [    
           "https://play.google.com/store/apps/details?id=com.cm.aac",
-          "https://www.amazon.com/gp/product/CMUK-AAC-Speech-Communication/dp/B0GJTDZ4CJ"
+          "https://www.amazon.com/dp/B0GJTDZ4CJ"
         ],
         "description": "An offline AAC board app with symbol boards, natural text-to-speech, custom boards, accessibility tools, and a one-time premium unlock.",
         "image": "{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.png",
@@ -70,11 +70,12 @@ layout: null
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF0Z9C9SZH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-PF0Z9C9SZH');
 </script>
+
 <body>
   <div class="bg-orb bg-orb-a" aria-hidden="true"></div>
   <div class="bg-orb bg-orb-b" aria-hidden="true"></div>
@@ -94,6 +95,9 @@ layout: null
         <a href="#features">Features</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#premium">Premium</a>
+
+        <a href="#download" class="mobile-get-pill" aria-label="Jump to download links">GET</a>
+
         <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false"
           aria-label="Switch to light mode" title="Switch to light mode">
           <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
@@ -105,20 +109,26 @@ layout: null
               d="M12 1.8v2.4M12 19.8v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" />
           </svg>
         </button>
-        <a class="store-badge-link header-store-link" href="{{ site.google_play_url }}" target="_blank" rel="noopener"
-          aria-label="Open on Google Play">
+        <a class="store-badge-link header-store-link"
+          href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
+          target="_blank" rel="noopener" aria-label="Open on Google Play">
           <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/google-play-badge.png"
             alt="Get it on Google Play" />
         </a>
-        <a class="header-store-text" href="{{ site.google_play_url }}" target="_blank" rel="noopener">
+        <a class="header-store-text"
+          href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
+          target="_blank" rel="noopener">
           Google Play
         </a>
-        <a class="store-badge-link header-store-link" href="{{ site.amazon_url }}" target="_blank" rel="noopener"
-          aria-label="Open on Amazon">
+        <a class="store-badge-link header-store-link"
+          href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=site_header&utm_campaign=desktop_nav"
+          target="_blank" rel="noopener" aria-label="Open on Amazon">
           <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/amazon-badge.png"
             alt="Available at Amazon" />
         </a>
-        <a class="header-store-text" href="{{ site.amazon_url }}" target="_blank" rel="noopener">
+        <a class="header-store-text"
+          href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=site_header&utm_campaign=desktop_nav"
+          target="_blank" rel="noopener">
           Amazon
         </a>
       </nav>
@@ -144,13 +154,15 @@ layout: null
         </p>
 
         <div class="hero-actions">
-          <a class="store-badge-link" href="{{ site.google_play_url }}" target="_blank" rel="noopener"
-            aria-label="Open on Google Play">
+          <a class="store-badge-link"
+            href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dhero_section%26utm_campaign%3Dimmediate_download"
+            target="_blank" rel="noopener" aria-label="Open on Google Play">
             <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/google-play-badge.png"
               alt="Get it on Google Play" />
           </a>
-          <a class="store-badge-link" href="{{ site.amazon_url }}" target="_blank" rel="noopener"
-            aria-label="Open on Amazon">
+          <a class="store-badge-link"
+            href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=hero_section&utm_campaign=immediate_download"
+            target="_blank" rel="noopener" aria-label="Open on Amazon">
             <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/amazon-badge.png"
               alt="Available at Amazon" />
           </a>
@@ -397,16 +409,19 @@ layout: null
           <div class="premium-column premium-featured">
             <div class="premium-header">
               <h3>Premium Unlock</h3>
-              <span class="badge-standout">Standout Feature</span>
             </div>
 
             <ul>
               <li>Unlimited custom communication boards</li>
               <li>Secure cloud backup and multi-device sync</li>
               <li>Multi-profile management (Home, School, Therapy)</li>
-              <li><strong>Smart Board Creator:</strong> Take a photo of a printed symbol worksheet, object, or
-                communication sheet. The app automatically flags items, crops grids, and generates a working digital
-                board in seconds.</li>
+
+              <li class="inline-badge-li">
+                <span class="badge-standout">Standout Feature</span>
+                <div class="badge-feature-text">
+                <strong>Smart Board Creator:</strong> Take a photo to instantly turn paper communication boards and symbol worksheets into interactive digital layouts. The built-in scanner flags items, crops grids automatically, and generates a fully working AAC tool in seconds.
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -430,18 +445,20 @@ layout: null
       </div>
     </section>
 
-    <section class="shell cta-banner" aria-label="Download call to action">
+    <section class="shell cta-banner" id="download" aria-label="Download call to action">
       <div>
-        <p class="eyebrow">Ready to download?</p>
-        <h2>Start with the free AAC tools, then unlock the advanced workflow when you need it.</h2>
+        <p class="eyebrow">Download the AAC App</p>
+        <h2>Start with free communication tools, then unlock advanced AAC features when you need them.</h2>
       </div>
       <div class="store-badge-row">
-        <a class="store-badge-link" href="{{ site.google_play_url }}" target="_blank" rel="noopener"
-          aria-label="Open on Google Play">
+        <a class="store-badge-link"
+          href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter_banner%26utm_campaign%3Dscrolled_conversion"
+          target="_blank" rel="noopener" aria-label="Open on Google Play">
           <img class="store-badge" src="{{ site.baseurl }}/assets/google-play-badge.png" alt="Get it on Google Play" />
         </a>
-        <a class="store-badge-link" href="{{ site.amazon_url }}" target="_blank" rel="noopener"
-          aria-label="Open on Amazon">
+        <a class="store-badge-link"
+          href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=footer_banner&utm_campaign=scrolled_conversion"
+          target="_blank" rel="noopener" aria-label="Open on Amazon">
           <img class="store-badge" src="{{ site.baseurl }}/assets/amazon-badge.png" alt="Available at Amazon" />
         </a>
       </div>
@@ -627,6 +644,38 @@ layout: null
       setTheme(currentTheme);
       render();
       startAutoSlide(); // Kick off the automated loop tracker
+
+      // Instant jump handling for the Mobile GET Pill
+      document.addEventListener('click', (event) => {
+        // Check if the clicked element (or its closest parent) is your mobile GET pill
+        const targetPill = event.target.closest('.mobile-get-pill');
+
+        if (targetPill) {
+          const downloadSection = document.querySelector('#download');
+
+          if (downloadSection) {
+            event.preventDefault();
+
+            // 1. Temporarily strip global CSS smooth scrolling to force an instant jump
+            const htmlEl = document.documentElement;
+            const originalScrollBehavior = htmlEl.style.scrollBehavior;
+            htmlEl.style.scrollBehavior = 'auto';
+
+            // 2. Perform the instant scroll snap alignment
+            downloadSection.scrollIntoView({ behavior: 'auto', block: 'start' });
+
+            // 3. Silently update the URL address bar hash without triggering a jump glitch
+            history.replaceState(null, '', '#download');
+
+            // 4. Restore your default scroll behavior immediately for normal user scrolling
+            setTimeout(() => {
+              htmlEl.style.scrollBehavior = originalScrollBehavior;
+            }, 0);
+          }
+        }
+      });
+
+
     })();
   </script>
 </body>

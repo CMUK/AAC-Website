@@ -49,17 +49,7 @@ html[data-theme="light"] {
   margin: 0;
 }
 
-.badge-standout {
-  background: var(--accent-2);
-  color: #04101a;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 0.25rem 0.65rem;
-  border-radius: 999px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
+
 
 
 /* --- Light Mode Contrast Fix for "No Subscription" Pill --- */
@@ -83,10 +73,7 @@ html[data-theme="light"] .eyebrow-accent {
     font-size: 1.2rem; /* Tightens the font sizing so it never forces a wrap */
   }
 
-  .badge-standout {
-    font-size: 0.65rem; /* Scales the badge down appropriately for smaller mobile viewports */
-    padding: 0.2rem 0.55rem;
-  }
+
 
   .shot-grid {
     display: flex !important;           /* Switch from grid to a single horizontal row */
@@ -1030,6 +1017,9 @@ html[data-theme="light"] .fullscreen-close {
   }
 }
 
+.mobile-get-pill {
+  display: none;
+}
 
 @media (max-width: 720px) {
   :root {
@@ -1062,12 +1052,7 @@ html[data-theme="light"] .fullscreen-close {
   }
 
 
-/* Reduce header-bar height so the content sits up higher */
-  .header-bar {
-    min-height: 60px !important; /* Forces a tighter vertical profile */
-    padding: 0 0.75rem !important; /* Pushes elements slightly inward from the screen edge */
 
-  }
 
   /* Bring the hero section closer to the bottom of the header */
   .hero {
@@ -1090,6 +1075,7 @@ html[data-theme="light"] .fullscreen-close {
     width: 40px;
     height: 40px;
     border-radius: 12px;
+    min-width: 40px !important;
   }
 
   /* 4. Completely eliminate the old desktop link layouts */
@@ -1099,12 +1085,44 @@ html[data-theme="light"] .fullscreen-close {
     display: none !important;
   }
 
-  .header-nav {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: flex-end;
+  .header-nav .mobile-get-pill {
+    display: inline-flex !important;
   }
+
+
+/* Reset the header bar behavior to allow proper right alignment */
+  .header-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* Force the navigation menu wrapper to be a tight horizontal line */
+  .header-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 0.5rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Ensure the theme toggle doesn't drop down or use extra relative margins */
+  .header-nav .theme-toggle {
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+  }
+
 
   /* 5. Push your background glowing orbs higher up to fill the void */
   .bg-orb-a {
@@ -1181,9 +1199,87 @@ html[data-theme="light"] .fullscreen-close {
     height: 46px !important; /* Scaled to drop cleanly into tight viewports */
     width: auto !important;
   }
+
+    /* Base Mobile Styling for the GET Pill Button */
+  .mobile-get-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(59, 130, 246, 0.2); /* Soft branding blue backdrop */
+    color: #3b82f6;                      /* Clean active focus state blue */
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0.9rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.2s, border-color 0.2s;
+    white-space: nowrap; /* Prevents text wrapping inside the pill */
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-get-pill:hover,
+  .mobile-get-pill:focus {
+    background: rgba(59, 130, 246, 0.3);
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: none;
+  }
 }
 
 html[data-theme="light"] .brand-mark {
   box-shadow: 0 10px 25px rgba(8, 125, 112, 0.08);
   background: #fff;
+}
+
+/* Improve GET pill contrast specifically for the light theme */
+html[data-theme="light"] .mobile-get-pill {
+  color: #1d4ed8; /* Deeper, high-contrast accessible blue text */
+  background: rgba(59, 130, 246, 0.12); /* Slightly cleaner tint */
+  border-color: rgba(59, 130, 246, 0.3); /* Defined border boundary */
+}
+
+html[data-theme="light"] .mobile-get-pill:hover,
+html[data-theme="light"] .mobile-get-pill:focus {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: #1d4ed8;
+}
+
+/* Clean inline arrangement for the premium list item badge */
+.inline-badge-li {
+  margin-top: 1.25rem !important; /* Adds subtle separation from the bullet above */
+  line-height: 1.6;
+}
+
+/* Make the text badge scale tightly so it behaves like a text character inline */
+.inline-badge-li .badge-standout {
+  display: inline-block !important;
+  vertical-align: middle;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.65rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+
+background: var(--accent-2, #ff8f70) !important; /* Solid orange background */
+  color: #050a12 !important;                       /* Deep dark text for extreme contrast */
+  border: none !important;
+
+  padding: 0.18rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.35rem;               /* Clean space before the bold 'Smart' word starts */
+  position: relative;
+  top: -1px;             
+  
+}
+
+html[data-theme="light"] .inline-badge-li .badge-standout {
+  color: #334155 !important;                    /* Slate gray text */
+  background: #f1f5f9 !important;               /* Clean light gray background fill */
+  border-color: #cbd5e1 !important;             /* Muted crisp border edge */
 }
