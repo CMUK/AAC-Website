@@ -595,6 +595,15 @@ h3 {
   width: min(100%, 680px);
 }
 
+.life-section {
+  margin-top: 0.5rem;
+}
+
+.life-carousel {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
 .carousel-frame {
   position: relative;
 }

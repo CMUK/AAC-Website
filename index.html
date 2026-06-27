@@ -385,6 +385,58 @@ layout: null
       </div>
     </section>
 
+    <section class="shell section life-section" id="life">
+      <div class="section-heading">
+        <p class="eyebrow">Example</p>
+        <h2>See how the app supports everyday communication.</h2>
+        <p>
+          From quick requests to fuller sentences, the same board can fit into family routines, classrooms, and therapy sessions.
+        </p>
+      </div>
+
+      <div class="hero-carousel life-carousel" data-carousel data-start="0">
+        <div class="carousel-frame">
+          <button class="carousel-nav nav-left" type="button" data-prev aria-label="Previous image"></button>
+          <button class="carousel-nav nav-right" type="button" data-next aria-label="Next image"></button>
+
+          <div class="carousel-slides">
+            <button class="carousel-slide" type="button" data-slide
+              data-fullscreen-src="{{ site.baseurl }}/assets/1-dark.png"
+              data-fullscreen-alt="life AAC example showing a communication board in a home setting"
+              data-theme-src-dark="{{ site.baseurl }}/assets/1-dark.png"
+              data-theme-src-light="{{ site.baseurl }}/assets/1-dark.png">
+              <img src="{{ site.baseurl }}/assets/1-dark.png"
+                alt="AAC example showing a communication board in a home setting" />
+            </button>
+            <button class="carousel-slide" type="button" data-slide
+              data-fullscreen-src="{{ site.baseurl }}/assets/2-dark.png"
+              data-fullscreen-alt="AAC example showing a communication board in a classroom setting"
+              data-theme-src-dark="{{ site.baseurl }}/assets/2-dark.png"
+              data-theme-src-light="{{ site.baseurl }}/assets/2-dark.png">
+              <img src="{{ site.baseurl }}/assets/2-dark.png"
+                alt="AAC example showing a communication board in a classroom setting" />
+            </button>
+            <button class="carousel-slide" type="button" data-slide
+              data-fullscreen-src="{{ site.baseurl }}/assets/3-dark.png"
+              data-fullscreen-alt="AAC example showing a communication board in a therapy setting"
+              data-theme-src-dark="{{ site.baseurl }}/assets/3-dark.png"
+              data-theme-src-light="{{ site.baseurl }}/assets/3-dark.png">
+              <img src="{{ site.baseurl }}/assets/3-dark.png"
+                alt="AAC example showing a communication board in a therapy setting" />
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-controls" aria-label="Carousel controls">
+          <div class="carousel-dots" role="tablist" aria-label="Example images">
+            <button class="carousel-dot" type="button" data-dot aria-label="Show image 1"></button>
+            <button class="carousel-dot" type="button" data-dot aria-label="Show image 2"></button>
+            <button class="carousel-dot" type="button" data-dot aria-label="Show image 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="shell section" id="premium">
       <div class="premium-panel">
         <div class="section-heading section-heading-tight">
@@ -478,47 +530,33 @@ layout: null
   <script>
     (() => {
       const themeToggle = document.querySelector('[data-theme-toggle]');
-      const carousel = document.querySelector('[data-carousel]');
+      const carousels = Array.from(document.querySelectorAll('[data-carousel]'));
       const fullscreen = document.querySelector('[data-fullscreen]');
       const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
-      if (!themeToggle || !carousel || !fullscreen) {
+      if (!themeToggle || !fullscreen) {
         return;
       }
 
       const defaultTheme = 'dark';
       const themeKey = 'aac-theme';
-      const slides = Array.from(carousel.querySelectorAll('[data-slide]'));
-      const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
-      const prevButton = carousel.querySelector('[data-prev]');
-      const nextButton = carousel.querySelector('[data-next]');
-      const fullscreenImage = fullscreen.querySelector('img');
-      const closeButton = fullscreen.querySelector('[data-close]');
-      let currentIndex = Number(carousel.dataset.start || 0);
+      const carouselControllers = [];
       let currentTheme = localStorage.getItem(themeKey) || defaultTheme;
 
-      // --- AUTO SLIDE CONFIGURATION ---
-      let autoSlideTimer = null;
-      const SLIDE_DURATION = 4000; // Cycles every 4 seconds
-
-      function startAutoSlide() {
-        stopAutoSlide(); // Clear existing loops to prevent multiple speed-up timers
-        autoSlideTimer = setInterval(() => {
-          goTo(currentIndex + 1);
-        }, SLIDE_DURATION);
+      function updateSlideImages() {
+        const allSlides = Array.from(document.querySelectorAll('[data-slide]'));
+        allSlides.forEach((slide) => {
+          const image = slide.querySelector('img');
+          const nextSrc =
+            currentTheme === 'light'
+              ? slide.dataset.themeSrcLight || slide.dataset.themeSrcDark || image?.src
+              : slide.dataset.themeSrcDark || image?.src;
+          if (image && image.src !== nextSrc) {
+            image.src = nextSrc;
+          }
+          slide.dataset.fullscreenSrc = nextSrc;
+        });
       }
-
-      function stopAutoSlide() {
-        if (autoSlideTimer) {
-          clearInterval(autoSlideTimer);
-        }
-      }
-
-      function handleManualInteraction(actionFunction) {
-        actionFunction();
-        startAutoSlide(); // Reset timer interval completely following click interaction
-      }
-      // --------------------------------
 
       function setTheme(theme) {
         currentTheme = theme === 'light' ? 'light' : 'dark';
@@ -537,82 +575,121 @@ layout: null
           themeColorMeta.setAttribute('content', currentTheme === 'dark' ? '#0a1222' : '#f7f9fc');
         }
 
-        slides.forEach((slide) => {
-          const image = slide.querySelector('img');
-          const nextSrc =
-            currentTheme === 'light'
-              ? slide.dataset.themeSrcLight || slide.dataset.themeSrcDark || image.src
-              : slide.dataset.themeSrcDark || image.src;
-          if (image && image.src !== nextSrc) {
-            image.src = nextSrc;
-          }
-          slide.dataset.fullscreenSrc = nextSrc;
-        });
+        updateSlideImages();
       }
 
-      function render() {
-        slides.forEach((slide, slideIndex) => {
-          const isActive = slideIndex === currentIndex;
-          slide.classList.toggle('is-active', isActive);
-          slide.setAttribute('aria-hidden', String(!isActive));
-          slide.tabIndex = isActive ? 0 : -1;
+      function initCarousel(carousel) {
+        const slides = Array.from(carousel.querySelectorAll('[data-slide]'));
+        const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
+        const prevButton = carousel.querySelector('[data-prev]');
+        const nextButton = carousel.querySelector('[data-next]');
+        const fullscreenImage = fullscreen.querySelector('img');
+        const closeButton = fullscreen.querySelector('[data-close]');
+        let currentIndex = Number(carousel.dataset.start || 0);
+        let autoSlideTimer = null;
+        const SLIDE_DURATION = 4000;
+
+        function startAutoSlide() {
+          stopAutoSlide();
+          autoSlideTimer = setInterval(() => {
+            controller.goTo(currentIndex + 1);
+          }, SLIDE_DURATION);
+        }
+
+        function stopAutoSlide() {
+          if (autoSlideTimer) {
+            clearInterval(autoSlideTimer);
+          }
+        }
+
+        function handleManualInteraction(actionFunction) {
+          actionFunction();
+          startAutoSlide();
+        }
+
+        function render() {
+          slides.forEach((slide, slideIndex) => {
+            const isActive = slideIndex === currentIndex;
+            slide.classList.toggle('is-active', isActive);
+            slide.setAttribute('aria-hidden', String(!isActive));
+            slide.tabIndex = isActive ? 0 : -1;
+          });
+
+          dots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === currentIndex;
+            dot.classList.toggle('is-active', isActive);
+            dot.setAttribute('aria-pressed', String(isActive));
+          });
+        }
+
+        function openFullscreen(src, alt) {
+          stopAutoSlide();
+          fullscreenImage.src = src;
+          fullscreenImage.alt = alt;
+          if (typeof fullscreen.showModal === 'function') {
+            fullscreen.showModal();
+          } else {
+            fullscreen.setAttribute('open', '');
+          }
+        }
+
+        function closeFullscreen() {
+          if (typeof fullscreen.close === 'function') {
+            fullscreen.close();
+          } else {
+            fullscreen.removeAttribute('open');
+          }
+          fullscreenImage.src = '';
+          fullscreenImage.alt = '';
+          startAutoSlide();
+        }
+
+        const controller = {
+          carousel,
+          goTo(index) {
+            currentIndex = (index + slides.length) % slides.length;
+            render();
+          },
+          next() {
+            this.goTo(currentIndex + 1);
+          },
+          previous() {
+            this.goTo(currentIndex - 1);
+          }
+        };
+
+        slides.forEach((slide) => {
+          slide.addEventListener('click', () => {
+            openFullscreen(slide.dataset.fullscreenSrc, slide.dataset.fullscreenAlt || '');
+          });
         });
 
         dots.forEach((dot, dotIndex) => {
-          const isActive = dotIndex === currentIndex;
-          dot.classList.toggle('is-active', isActive);
-          dot.setAttribute('aria-pressed', String(isActive));
+          dot.addEventListener('click', () => {
+            handleManualInteraction(() => controller.goTo(dotIndex));
+          });
         });
-      }
 
-      function goTo(index) {
-        currentIndex = (index + slides.length) % slides.length;
+        prevButton?.addEventListener('click', () => {
+          handleManualInteraction(() => controller.previous());
+        });
+
+        nextButton?.addEventListener('click', () => {
+          handleManualInteraction(() => controller.next());
+        });
+
+        closeButton?.addEventListener('click', closeFullscreen);
+
+        carousel.addEventListener('mouseenter', stopAutoSlide);
+        carousel.addEventListener('mouseleave', startAutoSlide);
+
         render();
+        startAutoSlide();
+
+        carouselControllers.push(controller);
       }
 
-      function openFullscreen(src, alt) {
-        stopAutoSlide(); // Halt transitions completely when examining modal preview windows
-        fullscreenImage.src = src;
-        fullscreenImage.alt = alt;
-        if (typeof fullscreen.showModal === 'function') {
-          fullscreen.showModal();
-        } else {
-          fullscreen.setAttribute('open', '');
-        }
-      }
-
-      function closeFullscreen() {
-        if (typeof fullscreen.close === 'function') {
-          fullscreen.close();
-        } else {
-          fullscreen.removeAttribute('open');
-        }
-        fullscreenImage.src = '';
-        fullscreenImage.alt = '';
-        startAutoSlide(); // Safely wake timer cycle processes back up
-      }
-
-      slides.forEach((slide) => {
-        slide.addEventListener('click', () => {
-          openFullscreen(slide.dataset.fullscreenSrc, slide.dataset.fullscreenAlt || '');
-        });
-      });
-
-      dots.forEach((dot, dotIndex) => {
-        dot.addEventListener('click', () => {
-          handleManualInteraction(() => goTo(dotIndex));
-        });
-      });
-
-      prevButton?.addEventListener('click', () => {
-        handleManualInteraction(() => goTo(currentIndex - 1));
-      });
-
-      nextButton?.addEventListener('click', () => {
-        handleManualInteraction(() => goTo(currentIndex + 1));
-      });
-
-      closeButton?.addEventListener('click', closeFullscreen);
+      carousels.forEach(initCarousel);
 
       themeToggle.addEventListener('click', () => {
         setTheme(currentTheme === 'dark' ? 'light' : 'dark');
@@ -620,30 +697,40 @@ layout: null
 
       fullscreen.addEventListener('click', (event) => {
         if (event.target === fullscreen) {
-          closeFullscreen();
+          const activeController = carouselControllers.find((controller) => controller.carousel.contains(document.activeElement));
+          if (activeController) {
+            activeController.carousel.querySelector('[data-close]')?.click();
+          } else {
+            fullscreen.close();
+          }
         }
       });
 
       document.addEventListener('keydown', (event) => {
         if (fullscreen.open && event.key === 'Escape') {
-          closeFullscreen();
+          fullscreen.close();
+          return;
         }
+
+        const activeCarousel = document.activeElement?.closest('[data-carousel]');
+        const activeController = carouselControllers.find((controller) => controller.carousel === activeCarousel);
+
+        if (!activeController) {
+          return;
+        }
+
         if (event.key === 'ArrowLeft') {
-          handleManualInteraction(() => goTo(currentIndex - 1));
+          event.preventDefault();
+          activeController.previous();
         }
         if (event.key === 'ArrowRight') {
-          handleManualInteraction(() => goTo(currentIndex + 1));
+          event.preventDefault();
+          activeController.next();
         }
       });
 
-      // Pause transitions if user hovers pointer anywhere over carousel module
-      carousel.addEventListener('mouseenter', stopAutoSlide);
-      carousel.addEventListener('mouseleave', startAutoSlide);
-
       // Initializations
       setTheme(currentTheme);
-      render();
-      startAutoSlide(); // Kick off the automated loop tracker
 
       // Instant jump handling for the Mobile GET Pill
       document.addEventListener('click', (event) => {
