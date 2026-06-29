@@ -773,13 +773,94 @@ html[data-theme="light"] .carousel-dot {
   font-size: 0.92rem;
   text-align: center;
 }
-
+/* Trust Banner Container */
 .trust-row {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+/* Flex container for the pills */
+.trust-pills-inner {
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.75rem;
-  padding: 0.9rem 0 1.8rem;
+  width: 100%;
+}
+
+/* Clean Context Label */
+.trust-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand);
+}
+
+/* Pill Styling */
+.trust-pill {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  color: #fff;
+  white-space: nowrap; /* Prevents text inside pills from splitting into 2 lines */
+}
+
+
+@media (max-width: 768px) {
+  .trust-row {
+    background: transparent;
+    border: none;
+    padding: 0;
+    /* Crushes the vertical gap above and below the row */
+    margin: 0.5rem 0 0 0; 
+    width: 100%;
+  }
+
+  .trust-label {
+    padding-left: 1rem;
+    margin-bottom: 0.5rem; /* Tight gap right above the pills */
+  }
+
+  .trust-pills-inner {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    /* Reduced bottom padding so it sits tighter above "CORE FEATURES" */
+    padding: 0 1rem 0.5rem 1rem; 
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .trust-pills-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .trust-pill {
+    flex: 0 0 auto;
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* Light Mode Adaptations */
+[data-theme="light"] .trust-label {
+  color: #1e293b; /* A clean, deep slate tone for text contrast */
+}
+
+[data-theme="light"] .trust-pill {
+  background: rgba(0, 0, 0, 0.04); /* Soft tint that coordinates with your dark mode setup */
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #334155; /* Sharp contrast for readable condition labels in image_a07998.jpg */
 }
 
 .section {
