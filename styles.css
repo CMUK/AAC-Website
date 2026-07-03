@@ -60,6 +60,12 @@ html[data-theme="light"] .eyebrow-accent {
   border-color: rgba(235, 94, 40, 0.25) !important;
 }
 
+html[data-theme="light"] .eyebrow:not(.eyebrow-accent) {
+  background: rgba(5, 107, 96, 0.1) !important; /* Soft version of your light-mode brand color */
+  color: #056b60 !important;                     /* Your deep, compliant brand teal */
+  border-color: rgba(5, 107, 96, 0.2) !important;
+}
+
 /* --- Mobile Specific Refinements --- */
 @media (max-width: 720px) {
   /* Forces the header title and badge to stay aligned on a single row */
@@ -1147,6 +1153,22 @@ html[data-theme="light"] .fullscreen-close {
   /* Bring the hero section closer to the bottom of the header */
   .hero {
     padding-top: 1.5rem !important; /* Reduces the massive gap above the image */
+  }
+
+  /* --- Fix for Large Header Scaling & Overlaps --- */
+  h1 {
+    font-size: 2.15rem !important;      /* Reduces text size so long words do not clip the viewport edge */
+    line-height: 1.22 !important;       /* Increases line height so vertical letters do not collide */
+    letter-spacing: -0.03em !important; /* Slightly loosens the super-tight desktop tracking */
+    margin-bottom: 1.25rem !important;  /* Creates healthy separation right above the body paragraph */
+  }
+
+  /* Clears structural collisions caused by large text dimensions blowing past boundaries */
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1.5rem !important;
   }
 
 
