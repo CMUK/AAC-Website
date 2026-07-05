@@ -65,6 +65,38 @@ html[data-theme="light"] .eyebrow-accent {
   color: #a63214 !important;                      /* Deep accessible coral-red text */
   border-color: rgba(222, 86, 49, 0.3) !important;
 }
+html[data-theme="dark"] .mobile-get-pill {
+  background: var(--brand) !important; /* Employs your vibrant #7bfcee cyan flare */
+  color: #050a12 !important;            /* Clean, high-contrast dark slate text */
+  border: none !important;
+  box-shadow: 0 0 14px rgba(123, 252, 238, 0.35); /* Subtle glow matching your dots[cite: 4] */
+}
+
+html[data-theme="light"] .mobile-get-pill {
+  color: #ffffff !important;               /* Crisp, pure white text for solid readability */
+  background: var(--brand-2, #305be3) !important; /* Employs your rich, compliant light-mode theme blue[cite: 4] */
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(48, 91, 227, 0.25); /* Adds minor lift depth so it feels tactile */
+}
+
+/* --- Balanced Tablet Layout Tweaks --- */
+@media (min-width: 721px) and (max-width: 960px) {
+  .shot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* Forces a neat 2x2 grid */
+    gap: 1.5rem;
+    max-width: 720px; /* Prevents cards from getting excessively wide */
+    margin: 0 auto;   /* Centers the grid nicely in the shell container */
+  }
+
+  .shot-card {
+    padding: 1.1rem; /* Grants breathing room around presentation graphics */
+  }
+  
+  .shot-card figcaption {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+}
 
 /* --- Mobile Specific Refinements --- */
 @media (max-width: 720px) {
@@ -104,36 +136,44 @@ html[data-theme="light"] .eyebrow-accent {
     margin: 0;
   }
 
+/* Target the parent container to force side-by-side layout */
+  .eyebrow-row {
+    flex-wrap: nowrap !important; /* Overrides the template's inline wrapping style */
+    justify-content: flex-start;
+    gap: 0.4rem !important;        /* Tightens the gap between the two pills */
+    width: 100%;
+  }
+
   .eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
-    margin: 0 0 1rem;
-    
-    padding: 0.25rem 0.75rem; 
-    
+    justify-content: center;
+    margin: 0;
+    padding: 0.25rem 0.55rem;   /* Optimized for Lexend Deca footprint */
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--brand);
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 0.72rem;
+    letter-spacing: 0.03em;     /* Slightly lowered for perfect narrow fit */
+    font-size: 0.65rem;         /* Perfectly calibrated size for narrow screens */
+    white-space: nowrap;        /* Guarantees individual pills never break internally */
+    flex: 0 1 auto;             /* Allows safe automatic scaling without breaking */
   }
 
   /* 1. Force download badges to sit neatly side-by-side */
-  .store-badge-row {
+.cta-banner .store-badge-row {
     display: flex !important;
-    flex-direction: row !important;
-    justify-content: center;
-    gap: 0.75rem;
-    width: 100%;
-    margin-bottom: 0.75rem;
+    flex-direction: row !important; 
+    flex-wrap: nowrap !important;    /* Fixed: Blocks the badges from breaking onto a new line */
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    margin-top: 1.5rem;
   }
-
   .store-badge {
     height: 48px; /* Slightly scale down badge height to guarantee they fit side-by-side */
     width: auto;
   }
+
+  
 
   /* 2. Style the actions block to expand gracefully */
 .hero-actions {
@@ -171,6 +211,28 @@ html[data-theme="light"] .eyebrow-accent {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
     white-space: nowrap;
+  }
+
+
+  .feature-card {
+    padding: 1.25rem;
+    min-height: auto; /* Lets the card hug the content snugly */
+  }
+
+  /* Create a header row wrapper for the icon and text */
+  .feature-card h3 {
+    display: flex;
+    align-items: center; /* Vertically centers the icon with the heading text */
+    gap: 0.75rem;        /* Clean space between icon and title */
+    margin: 0 0 0.55rem 0;
+  }
+
+  /* Reposition the SVG icon inside the heading context */
+  .feature-card .feature-icon {
+    margin-bottom: 0 !important; /* Strips the old desktop bottom margin */
+    flex-shrink: 0;              /* Prevents the icon from squeezing on small devices */
+    width: 28px !important;      /* Slightly scaled down for tighter row balance */
+    height: 28px !important;
   }
 }
 
@@ -216,6 +278,7 @@ body {
     linear-gradient(180deg, #07101d 0%, #091423 45%, #050a12 100%);
   line-height: 1.6;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -295,6 +358,7 @@ h2,
 h3,
 .eyebrow {
   font-family: "Lexend Deca", system-ui, sans-serif;
+  font-weight: 700;
 }
 
 .brand-copy strong {
@@ -1062,6 +1126,8 @@ html[data-theme="light"] .fullscreen-close {
   opacity: 0.75;
   pointer-events: none;
   z-index: -1;
+  will-change: transform;
+  transform: translate3d(0, 0, 0); /* Forces GPU handling */
 }
 
 .bg-orb-a {
