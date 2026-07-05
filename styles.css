@@ -54,16 +54,16 @@ html[data-theme="light"] {
 
 /* --- Light Mode Contrast Fix for "No Subscription" Pill --- */
 
-html[data-theme="light"] .eyebrow-accent {
-  background: rgba(235, 94, 40, 0.12) !important; /* Slightly richer tint backdrop */
-  color: #bf3a13 !important; /* Deeper, high-contrast text color for visibility */
-  border-color: rgba(235, 94, 40, 0.25) !important;
+html[data-theme="light"] .eyebrow:not(.eyebrow-accent) {
+  background: rgba(5, 107, 96, 0.15) !important; /* Slightly richer teal backdrop */
+  color: #034d45 !important;                     /* Deeper, highly compliant slate-teal */
+  border-color: rgba(5, 107, 96, 0.3) !important; /* Crisper border edge */
 }
 
-html[data-theme="light"] .eyebrow:not(.eyebrow-accent) {
-  background: rgba(5, 107, 96, 0.1) !important; /* Soft version of your light-mode brand color */
-  color: #056b60 !important;                     /* Your deep, compliant brand teal */
-  border-color: rgba(5, 107, 96, 0.2) !important;
+html[data-theme="light"] .eyebrow-accent {
+  background: rgba(222, 86, 49, 0.14) !important; /* Richer orange-coral backdrop */
+  color: #a63214 !important;                      /* Deep accessible coral-red text */
+  border-color: rgba(222, 86, 49, 0.3) !important;
 }
 
 /* --- Mobile Specific Refinements --- */
@@ -207,7 +207,7 @@ html[data-theme="light"] body {
 
 body {
   margin: 0;
-  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-family: "Lexend", "IBM Plex Sans", system-ui, sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(110, 231, 216, 0.14), transparent 30%),
@@ -294,7 +294,7 @@ h1,
 h2,
 h3,
 .eyebrow {
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: "Lexend Deca", system-ui, sans-serif;
 }
 
 .brand-copy strong {
@@ -528,7 +528,7 @@ html[data-theme="light"] .button-secondary {
 h1 {
   margin: 0;
   font-size: clamp(2.55rem, 5vw, 4.65rem);
-  line-height: 0.84;
+  line-height: 1.05;
   letter-spacing: -0.06em;
   max-width: 13.5ch;
 }
@@ -803,7 +803,7 @@ html[data-theme="light"] .carousel-dot {
 
 /* Clean Context Label */
 .trust-label {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Lexend", "IBM Plex Sans", system-ui, sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1319,7 +1319,7 @@ html[data-theme="light"] .fullscreen-close {
     background: rgba(59, 130, 246, 0.2); /* Soft branding blue backdrop */
     color: #3b82f6;                      /* Clean active focus state blue */
     border: 1px solid rgba(59, 130, 246, 0.4);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: "Lexend", "IBM Plex Sans", system-ui, sans-serif;
     font-weight: 700;
     font-size: 0.75rem;
     letter-spacing: 0.05em;
@@ -1370,7 +1370,7 @@ html[data-theme="light"] .mobile-get-pill:focus {
 .inline-badge-li .badge-standout {
   display: inline-block !important;
   vertical-align: middle;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Lexend", "IBM Plex Sans", system-ui, sans-serif;
   font-weight: 700;
   font-size: 0.65rem !important;
   text-transform: uppercase;
