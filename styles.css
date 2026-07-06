@@ -130,10 +130,20 @@ html[data-theme="light"] .mobile-get-pill {
     display: none;                     /* Chrome, Safari, and Opera */
   }
 
+
+
   .shot-card {
-    flex: 0 0 82%;                     /* Show 82% of the card, revealing a peek of the next one */
-    scroll-snap-align: center;         /* Snaps perfectly to the center of the mobile screen */
+    flex: 0 0 82%;                     /* Show 82% of the card on small phones */
+    scroll-snap-align: center;         /* Snaps perfectly to the center of the mobile screen[cite: 6] */
     margin: 0;
+  }
+
+  /* Fix for portrait tablets / larger phones running mobile layouts */
+  @media (min-width: 480px) {
+    .shot-card {
+      flex: 0 0 44%;                   /* Comfortably displays two screenshots side-by-side */
+      scroll-snap-align: start;        /* Adjusts snap alignment for dual columns */
+    }
   }
 
 /* Target the parent container to force side-by-side layout */
