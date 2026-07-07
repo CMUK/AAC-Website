@@ -1470,3 +1470,77 @@ html[data-theme="light"] .inline-badge-li .badge-standout {
   background: #f1f5f9 !important;               /* Clean light gray background fill */
   border-color: #cbd5e1 !important;             /* Muted crisp border edge */
 }
+
+/* --- Long-form Article Formatting --- */
+.article-content h1 {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+/* Fixes the layout: Apply margins EXCEPT inside utility panels */
+.article-content h2:not(.premium-panel h2) {
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-content h3:not(.premium-panel h3) {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-content p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.premium-header h3 {
+  margin: 0 !important;
+}
+
+/* 1. Establish a layout boundary for the card */
+.resources-grid .feature-card {
+  position: relative !important;
+  /* Add generous bottom padding so your paragraphs never overlap the fixed link */
+  padding-bottom: 4.5rem !important; 
+}
+
+/* 2. Anchor the link directly to the bottom-left coordinate of the card frame */
+.resources-grid .feature-card .trust-label {
+  position: absolute !important;
+  bottom: 2rem; /* Matches your card's top/side padding for perfect symmetry */
+  left: 2rem;   /* Aligns it perfectly inline with the text edges */
+  
+  margin: 0 !important;
+  display: inline-block !important;
+}
+
+/* Hide the footer link by default on desktop screens */
+.footer-nav {
+  display: none;
+  margin-top: 1rem;
+}
+
+.footer-nav a {
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* Only show it on screens smaller than a typical tablet breakpoint */
+@media (max-width: 768px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-nav {
+    display: block; /* Reveals the link explicitly on mobile viewports */
+  }
+}
