@@ -1503,22 +1503,35 @@ html[data-theme="light"] .inline-badge-li .badge-standout {
   margin: 0 !important;
 }
 
-/* 1. Establish a layout boundary for the card */
+
+
+
+/* 1. Reset rules for mobile views (under 768px wide) */
 .resources-grid .feature-card {
   position: relative !important;
-  /* Add generous bottom padding so your paragraphs never overlap the fixed link */
-  padding-bottom: 4.5rem !important; 
+  padding-bottom: 2rem !important; /* Reset to normal card padding */
 }
 
-/* 2. Anchor the link directly to the bottom-left coordinate of the card frame */
 .resources-grid .feature-card .trust-label {
-  position: absolute !important;
-  bottom: 2rem; /* Matches your card's top/side padding for perfect symmetry */
-  left: 2rem;   /* Aligns it perfectly inline with the text edges */
-  
-  margin: 0 !important;
+  position: static !important; /* Removes absolute positioning on mobile */
   display: inline-block !important;
+  margin-top: 1.5rem !important; /* Creates a clean layout gap under the paragraph */
 }
+
+/* 2. Lock absolute alignment ONLY on desktop screens */
+@media (min-width: 769px) {
+  .resources-grid .feature-card {
+    padding-bottom: 4.5rem !important; 
+  }
+
+  .resources-grid .feature-card .trust-label {
+    position: absolute !important;
+    bottom: 2rem; 
+    left: 2rem;   
+    margin: 0 !important;
+  }
+}
+
 
 /* Hide the footer link by default on desktop screens */
 .footer-nav {
@@ -1542,5 +1555,35 @@ html[data-theme="light"] .inline-badge-li .badge-standout {
   
   .footer-nav {
     display: block; /* Reveals the link explicitly on mobile viewports */
+  }
+
+  .section-heading h1,
+  .section-heading h2 {
+    font-size: 1.8rem !important;  /* Controls the index h2 and article h1 */
+    line-height: 1.25 !important;  
+    letter-spacing: -0.02em !important;       
+    margin-top: 0.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .section-heading p {
+    font-size: 1rem !important;    /* Keeps the paragraph text scaled cleanly below it */
+    line-height: 1.5 !important;
+  }
+
+  .resources-grid .feature-card {
+    position: relative !important;
+    padding-bottom: 2rem !important; 
+  }
+
+  .resources-grid .feature-card .trust-label {
+    position: static !important; 
+    display: inline-block !important;
+    margin-top: 1.5rem !important; 
+    
+    /* Force alignment flush to the left edge */
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
   }
 }
