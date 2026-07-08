@@ -626,8 +626,8 @@ h3 {
   line-height: 1.1;
 }
 
-.lede,
-.section-heading p,
+html[data-theme="dark"].lede,
+html[data-theme="dark"] .section-heading p,
 .quote-panel p,
 .site-footer {
   color: var(--muted);
@@ -708,6 +708,7 @@ html[data-theme="light"] .trust-pill {
   background: rgba(255, 255, 255, 0.78);
   border-color: rgba(16, 24, 40, 0.08);
 }
+
 
 .carousel-frame::before {
   content: "";
@@ -1498,6 +1499,15 @@ html[data-theme="light"] .inline-badge-li .badge-standout {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
+
+html[data-theme="dark"] .article-content li, html[data-theme="dark"] .article-content p {
+  color: var(--muted); /* Keeps the main sentence text soft */
+}
+
+html[data-theme="dark"] .article-content li strong {
+  color: var(--text); /* Forces the bold lead-in phrases to be crisp white */
+}
+
 
 .premium-header h3 {
   margin: 0 !important;

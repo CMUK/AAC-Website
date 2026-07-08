@@ -64,12 +64,38 @@ layout: null
         </span>
       </a>
       <nav class="header-nav">
-        <a href="{{ site.baseurl }}/resources/">← Back to Resources</a>
+        <a href="{{ site.baseurl }}/">Home</a>
+        <a href="{{ site.baseurl }}/#features">Features</a>
+        <a href="{{ site.baseurl }}/#screenshots">Screenshots</a>
+        <a href="{{ site.baseurl }}/#premium">Premium</a>
+        <a href="{{ site.baseurl }}/resources/">Resources</a>
         <a href="#download" class="mobile-get-pill" aria-label="Jump to download links">GET</a>
         <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme">
           <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 13.2A8.4 8.4 0 1 1 10.8 3 7.1 7.1 0 0 0 21 13.2Z" /></svg>
           <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" /><path d="M12 1.8v2.4M12 19.8v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" /></svg>
         </button>
+        <a class="store-badge-link header-store-link"
+          href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
+          target="_blank" rel="noopener" aria-label="Open on Google Play">
+          <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/google-play-badge.png"
+            alt="Get it on Google Play" />
+        </a>
+        <a class="header-store-text"
+          href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dreferral%26utm_campaign%3Dresources_articles%26utm_content%3Dprintable_guide"
+          target="_blank" rel="noopener">
+          Google Play
+        </a>
+        <a class="store-badge-link header-store-link"
+          href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=site_header&utm_campaign=desktop_nav"
+          target="_blank" rel="noopener" aria-label="Open on Amazon">
+          <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/amazon-badge.png"
+            alt="Available at Amazon" />
+        </a>
+        <a class="header-store-text"
+          href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=referral&utm_campaign=resources_articles&utm_content=printable_guide"
+          target="_blank" rel="noopener">
+          Amazon
+        </a>
       </nav>
     </div>
   </header>
@@ -111,10 +137,10 @@ layout: null
           <p>Skip the laminating machine. Download our offline-first application directly to your device.</p>
           
           <div class="hero-actions">
-            <a class="store-badge-link" href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dresource_page%26utm_campaign%3Dprintable_guide" target="_blank" rel="noopener">
+            <a class="store-badge-link" href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dreferral%26utm_campaign%3Dresources_articles%26utm_content%3Dprintable_guide" target="_blank" rel="noopener">
               <img class="store-badge" src="{{ site.baseurl }}/assets/google-play-badge.png" alt="Get it on Google Play" />
             </a>
-            <a class="store-badge-link" href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=resource_page&utm_campaign=printable_guide" target="_blank" rel="noopener">
+            <a class="store-badge-link" href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=referral&utm_campaign=resources_articles&utm_content=printable_guide" target="_blank" rel="noopener">
               <img class="store-badge" src="{{ site.baseurl }}/assets/amazon-badge.png" alt="Available at Amazon" />
             </a>
           </div>
