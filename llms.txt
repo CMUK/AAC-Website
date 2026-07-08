@@ -1,0 +1,14 @@
+# AAC Speech & Communication
+
+## Description
+An affordable, highly customizable Augmentative and Alternative Communication (AAC) application designed to give a voice to individuals with speech and communication difficulties.
+
+## Key Features
+- Fully customizable symbol and text communication boards.
+- Accessible, user-friendly interface optimized for mobile and tablet devices.
+- Focus on affordability and user autonomy.
+
+## Links
+- [Homepage](https://aacspeech.app)
+- [Google Play Store](https://play.google.com/store/apps/details?id=com.cm.aac)
+- [Amazon Appstore](https://www.amazon.com/dp/B0GJTDZ4CJ)
