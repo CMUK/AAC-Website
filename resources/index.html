@@ -3,40 +3,57 @@ layout: null
 ---
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0a1222" />
-  <meta name="description" content="Guides, insights, and free practical resources for using AAC speech and visual communication tools at home, school, and therapy." />
-  <meta name="keywords" content="aac resources and guides, speech therapy practical knowledge, visual communication tips, augmentative communication articles, nonverbal implementation assets" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/resources/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a1222" />
+    <meta name="description"
+        content="Guides, insights, and free practical resources for using AAC speech and visual communication tools at home, school, and therapy." />
+    <meta name="keywords"
+        content="aac resources and guides, speech therapy practical knowledge, visual communication tips, augmentative communication articles, nonverbal implementation assets" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/resources/" />
     <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.webp" />
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/icon.png" />
-  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/icon.png" />
-  <title>AAC Communication Resources & Guides | AAC Speech App</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css" />
-  <script src="{{ site.baseurl }}/assets/js/theme.js" defer></script>
-      <!-- Microsoft Clarity -->
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/icon.png" />
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/icon.png" />
+    <title>AAC Communication Resources & Guides | AAC Speech App</title>
+    <!-- Preconnect to Font Engines -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Non-blocking Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+    </noscript>
+
+    <!-- Non-blocking Theme Stylesheet -->
+    <link rel="preload" href="{{ site.baseurl }}/styles.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css">
+    </noscript>
+    <script src="{{ site.baseurl }}/assets/js/theme.js" defer></script>
+    <!-- Microsoft Clarity -->
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "xh1k4rndvm");
     </script>
 
     <!-- Google Analytics (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF0Z9C9SZH"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-PF0Z9C9SZH');
+        gtag('config', 'G-PF0Z9C9SZH');
     </script>
     <script type="application/ld+json">
 {
@@ -48,116 +65,133 @@ layout: null
 }
 </script>
 </head>
+
 <body>
-  <div class="bg-orb bg-orb-a" aria-hidden="true"></div>
-  <div class="bg-orb bg-orb-b" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-a" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-b" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <div class="shell header-bar">
-      <a class="brand" href="{{ site.baseurl }}/" aria-label="AAC Speech & Communication home">
-        <span class="brand-mark">
-          <img src="{{ site.baseurl }}/assets/icon.png" alt="AAC Speech & Communication logo" aria-hidden="true" />
-        </span>
-        <span class="brand-copy">
-          <strong>AAC Speech & Communication</strong>
-          <span>Offline communication boards</span>
-        </span>
-      </a>
-      <nav class="header-nav">
-        <a href="{{ site.baseurl }}/">Home</a>
-        <a href="{{ site.baseurl }}/#features">Features</a>
-        <a href="{{ site.baseurl }}/#screenshots">Screenshots</a>
-        <a href="{{ site.baseurl }}/#premium">Premium</a>
-        <a href="{{ site.baseurl }}/resources/">Resources</a>
-        <a href="#download" class="mobile-get-pill" aria-label="Jump to download links">GET</a>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme" title="Switch theme">
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 13.2A8.4 8.4 0 1 1 10.8 3 7.1 7.1 0 0 0 21 13.2Z" /></svg>
-          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" /><path d="M12 1.8v2.4M12 19.8v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" /></svg>
-        </button>
-        <a class="store-badge-link header-store-link"
-          href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
-          target="_blank" rel="noopener" aria-label="Open on Google Play">
-          <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/google-play-badge.png"
-            alt="Get it on Google Play" />
-        </a>
-        <a class="header-store-text"
-          href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
-          target="_blank" rel="noopener">
-          Google Play
-        </a>
-        <a class="store-badge-link header-store-link"
-          href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=site_header&utm_campaign=desktop_nav"
-          target="_blank" rel="noopener" aria-label="Open on Amazon">
-          <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/amazon-badge.png"
-            alt="Available at Amazon" />
-        </a>
-        <a class="header-store-text"
-          href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=site_header&utm_campaign=desktop_nav"
-          target="_blank" rel="noopener">
-          Amazon
-        </a>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="eyebrow">Practical Knowledge</p>
-        <h2>AAC Guides & Communication Resources</h2>
-        <p>Explore actionable insights, implementation guides, and free assets designed to support parents, speech therapists, and educators.</p>
-      </div>
+    <header class="site-header">
+        <div class="shell header-bar">
+            <a class="brand" href="{{ site.baseurl }}/" aria-label="AAC Speech & Communication home">
+                <span class="brand-mark">
+                    <img src="{{ site.baseurl }}/assets/icon.png" alt="AAC Speech & Communication logo"
+                        aria-hidden="true" />
+                </span>
+                <span class="brand-copy">
+                    <strong>AAC Speech & Communication</strong>
+                    <span>Offline communication boards</span>
+                </span>
+            </a>
+            <nav class="header-nav">
+                <a href="{{ site.baseurl }}/">Home</a>
+                <a href="{{ site.baseurl }}/#features">Features</a>
+                <a href="{{ site.baseurl }}/#screenshots">Screenshots</a>
+                <a href="{{ site.baseurl }}/#premium">Premium</a>
+                <a href="{{ site.baseurl }}/resources/">Resources</a>
+                <a href="#download" class="mobile-get-pill" aria-label="Jump to download links">GET</a>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false"
+                    aria-label="Switch theme" title="Switch theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3 7.1 7.1 0 0 0 21 13.2Z" />
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4.2" />
+                        <path
+                            d="M12 1.8v2.4M12 19.8v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" />
+                    </svg>
+                </button>
+                <a class="store-badge-link header-store-link"
+                    href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
+                    target="_blank" rel="noopener" aria-label="Open on Google Play">
+                    <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/google-play-badge.png"
+                        alt="Get it on Google Play" />
+                </a>
+                <a class="header-store-text"
+                    href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
+                    target="_blank" rel="noopener">
+                    Google Play
+                </a>
+                <a class="store-badge-link header-store-link"
+                    href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=site_header&utm_campaign=desktop_nav"
+                    target="_blank" rel="noopener" aria-label="Open on Amazon">
+                    <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/amazon-badge.png"
+                        alt="Available at Amazon" />
+                </a>
+                <a class="header-store-text"
+                    href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=site_header&utm_campaign=desktop_nav"
+                    target="_blank" rel="noopener">
+                    Amazon
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="shell section">
+            <div class="section-heading">
+                <p class="eyebrow">Practical Knowledge</p>
+                <h2>AAC Guides & Communication Resources</h2>
+                <p>Explore actionable insights, implementation guides, and free assets designed to support parents,
+                    speech therapists, and educators.</p>
+            </div>
 
-      <div class="feature-grid resources-grid">
-        
-        <!-- Card 1 -->
-        <article class="feature-card">
-          <span class="eyebrow">Implementation Guide</span>
-          <h3>How to Introduce an AAC Communication Board to a Nonverbal Child</h3>
-          <p>A step-by-step beginner's guide for parents navigating the introduction of a speech grid at home, reducing frustration, and modeling core words effectively.</p>
-          <!-- Changed to use your native style class -->
-          <a href="{{ site.baseurl }}/resources/how-to-start-aac.html" class="trust-label">Read Guide →</a>
-        </article>
+            <div class="feature-grid resources-grid">
 
-        <!-- Card 2 -->
-        <article class="feature-card">
-          <span class="eyebrow">Free Asset Collection</span>
-          <h3>Free Printable AAC Board Templates for Classrooms & Routines</h3>
-          <p>Download structured, high-contrast, physical communication layouts for home routines and educational environments using open-source symbol sets.</p>
-          <!-- Changed to use your native style class -->
-          <a href="{{ site.baseurl }}/resources/printable-boards.html" class="trust-label">View Free Templates →</a>
-        </article>
+                <!-- Card 1 -->
+                <article class="feature-card">
+                    <span class="eyebrow">Implementation Guide</span>
+                    <h3>How to Introduce an AAC Communication Board to a Nonverbal Child</h3>
+                    <p>A step-by-step beginner's guide for parents navigating the introduction of a speech grid at home,
+                        reducing frustration, and modeling core words effectively.</p>
+                    <!-- Changed to use your native style class -->
+                    <a href="{{ site.baseurl }}/resources/how-to-start-aac.html" class="trust-label">Read Guide →</a>
+                </article>
 
-        <!-- Resource Card 3 -->
-        <article class="feature-card">
-          <span class="eyebrow">Behavior & Connection</span>
-          <h3>Behind the Meltdown: How Communication Breakdowns Trigger Anxiety</h3>
-          <p>A deep look at how giving an individual an immediate visual voice can de-escalate sensory anxiety, replace physical frustration, and bridge crucial home communication gaps.</p>
-          <a href="{{ site.baseurl }}/resources/preventing-communication-meltdowns.html" class="trust-label">Read Guide →</a>
-        </article>
+                <!-- Card 2 -->
+                <article class="feature-card">
+                    <span class="eyebrow">Free Asset Collection</span>
+                    <h3>Free Printable AAC Board Templates for Classrooms & Routines</h3>
+                    <p>Download structured, high-contrast, physical communication layouts for home routines and
+                        educational environments using open-source symbol sets.</p>
+                    <!-- Changed to use your native style class -->
+                    <a href="{{ site.baseurl }}/resources/printable-boards.html" class="trust-label">View Free Templates
+                        →</a>
+                </article>
 
-      </div>
+                <!-- Resource Card 3 -->
+                <article class="feature-card">
+                    <span class="eyebrow">Behavior & Connection</span>
+                    <h3>Behind the Meltdown: How Communication Breakdowns Trigger Anxiety</h3>
+                    <p>A deep look at how giving an individual an immediate visual voice can de-escalate sensory
+                        anxiety, replace physical frustration, and bridge crucial home communication gaps.</p>
+                    <a href="{{ site.baseurl }}/resources/preventing-communication-meltdowns.html"
+                        class="trust-label">Read Guide →</a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+    <section class="shell cta-banner" id="download" aria-label="Download call to action">
+        <div>
+            <p class="eyebrow">Download the AAC App</p>
+            <h2>Start with free communication tools, then unlock advanced AAC features when you need them.</h2>
+        </div>
+        <div class="store-badge-row">
+            <a class="store-badge-link"
+                href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dresources_index%26utm_campaign%3Dscrolled_conversion"
+                target="_blank" rel="noopener" aria-label="Open on Google Play">
+                <img class="store-badge" src="{{ site.baseurl }}/assets/google-play-badge.png"
+                    alt="Get it on Google Play" />
+            </a>
+            <a class="store-badge-link"
+                href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=resources_index&utm_campaign=scrolled_conversion"
+                target="_blank" rel="noopener" aria-label="Open on Amazon">
+                <img class="store-badge" src="{{ site.baseurl }}/assets/amazon-badge.png" alt="Available at Amazon" />
+            </a>
+        </div>
     </section>
-  </main>
-<section class="shell cta-banner" id="download" aria-label="Download call to action">
-    <div>
-      <p class="eyebrow">Download the AAC App</p>
-      <h2>Start with free communication tools, then unlock advanced AAC features when you need them.</h2>
-    </div>
-    <div class="store-badge-row">
-      <a class="store-badge-link"
-        href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dresources_index%26utm_campaign%3Dscrolled_conversion"
-        target="_blank" rel="noopener" aria-label="Open on Google Play">
-        <img class="store-badge" src="{{ site.baseurl }}/assets/google-play-badge.png" alt="Get it on Google Play" />
-      </a>
-      <a class="store-badge-link"
-        href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=resources_index&utm_campaign=scrolled_conversion"
-        target="_blank" rel="noopener" aria-label="Open on Amazon">
-        <img class="store-badge" src="{{ site.baseurl }}/assets/amazon-badge.png" alt="Available at Amazon" />
-      </a>
-    </div>
-  </section>
-  <footer class="site-footer shell">
-    <p>© AAC Speech & Communication. Practical offline utilities for nonverbal communication assistance.</p>
-  </footer>
+    <footer class="site-footer shell">
+        <p>© AAC Speech & Communication. Practical offline utilities for nonverbal communication assistance.</p>
+    </footer>
 </body>
+
 </html>

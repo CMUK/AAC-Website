@@ -29,12 +29,25 @@ layout: null
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/icon.png" />
   <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/icon.png" />
   <title>AAC Speech & Communication | Offline AAC Board App</title>
+
+<!-- Preconnect to Font Engines -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css" />
+  
+  <!-- Non-blocking Google Fonts -->
+<link 
+  href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" 
+  rel="stylesheet" 
+  media="print" 
+  onload="this.media='all'" />
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</noscript>
+
+  <!-- Non-blocking Theme Stylesheet -->
+  <link rel="preload" href="{{ site.baseurl }}/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css"></noscript>
+
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",

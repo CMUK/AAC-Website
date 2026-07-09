@@ -146,26 +146,27 @@ html[data-theme="light"] .mobile-get-pill {
     }
   }
 
-/* Target the parent container to force side-by-side layout */
+/* Allow the pills to wrap cleanly to a new line instead of clipping */
   .eyebrow-row {
-    flex-wrap: nowrap !important; /* Overrides the template's inline wrapping style */
-    justify-content: flex-start;
-    gap: 0.4rem !important;        /* Tightens the gap between the two pills */
-    width: 100%;
+    flex-wrap: wrap !important; 
+    justify-content: flex-start !important;
+    gap: 0.4rem !important; /* Tighter gap between the stacked pills */
+    width: 100% !important;
   }
 
-  .eyebrow {
+.eyebrow {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 0.25rem 0.55rem;   /* Optimized for Lexend Deca footprint */
+    /* Slightly less vertical padding, perfect horizontal cushion */
+    padding: 0.3rem 0.65rem !important; 
     border-radius: 999px;
     text-transform: uppercase;
-    letter-spacing: 0.03em;     /* Slightly lowered for perfect narrow fit */
-    font-size: 0.65rem;         /* Perfectly calibrated size for narrow screens */
-    white-space: nowrap;        /* Guarantees individual pills never break internally */
-    flex: 0 1 auto;             /* Allows safe automatic scaling without breaking */
+    letter-spacing: 0.03em !important; 
+    font-size: 0.72rem !important; /* Perfect mid-ground size */
+    white-space: nowrap;        
+    flex: 0 1 auto;             
   }
 
   /* 1. Force download badges to sit neatly side-by-side */
@@ -279,7 +280,7 @@ html[data-theme="light"] body {
 
 body {
   margin: 0;
-  font-family: "Lexend", "IBM Plex Sans", system-ui, sans-serif;
+  font-family: "Lexend", system-ui, sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(110, 231, 216, 0.14), transparent 30%),
@@ -367,7 +368,7 @@ h1,
 h2,
 h3,
 .eyebrow {
-  font-family: "Lexend Deca", system-ui, sans-serif;
+  font-family: "Lexend", system-ui, sans-serif;
   font-weight: 700;
 }
 

@@ -7,7 +7,23 @@ layout: null
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0a1222" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css" />
+<!-- Preconnect to Font Engines -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Non-blocking Google Fonts -->
+<link 
+  href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" 
+  rel="stylesheet" 
+  media="print" 
+  onload="this.media='all'" />
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</noscript>
+
+  <!-- Non-blocking Theme Stylesheet -->
+  <link rel="preload" href="{{ site.baseurl }}/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css"></noscript>
   <title>Reducing Communication Meltdowns & Behavior Frustration with AAC</title>
   <meta name="description" content="How giving a nonverbal child an immediate visual voice can de-escalate anxiety, prevent behavioral breakdowns, and bridge communication gaps." />
   <meta name="keywords" content="aac behavior meltdowns, communication frustration autism, sensory anxiety visual voice, de-escalating tantrums communication board, behavior is communication, transition predictability" />
