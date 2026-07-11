@@ -7,19 +7,15 @@ layout: null
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0a1222" />
-<!-- Preconnect to Font Engines -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
-  <!-- Non-blocking Google Fonts -->
-<link 
-  href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" 
-  rel="stylesheet" 
-  media="print" 
-  onload="this.media='all'" />
-<noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet" />
-</noscript>
+<!-- Preconnect Handshakes to Font Engines -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Google Fonts Definition -->
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Core Production Theme Stylesheet -->
+<link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css" />
 
   <!-- Non-blocking Theme Stylesheet -->
   <link rel="preload" href="{{ site.baseurl }}/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -72,7 +68,7 @@ layout: null
     <div class="shell header-bar">
       <a class="brand" href="{{ site.baseurl }}/" aria-label="AAC Speech & Communication home">
         <span class="brand-mark">
-          <img src="{{ site.baseurl }}/assets/icon.webp" alt="AAC Speech & Communication logo" aria-hidden="true" />
+            <img src="{{ site.baseurl }}/assets/icon.webp" width="54" height="54" alt="AAC Speech & Communication logo" aria-hidden="true" style="aspect-ratio: 1/1;" />
         </span>
         <span class="brand-copy">
           <strong>AAC Speech & Communication</strong>
@@ -80,7 +76,6 @@ layout: null
         </span>
       </a>
       <nav class="header-nav">
-        <a href="{{ site.baseurl }}/">Home</a>
         <a href="{{ site.baseurl }}/#features">Features</a>
         <a href="{{ site.baseurl }}/#screenshots">Screenshots</a>
         <a href="{{ site.baseurl }}/#premium">Premium</a>
