@@ -33,4 +33,10 @@ layout: null
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- Article 4 -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/resources/gestalt-language-processing-aac.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
