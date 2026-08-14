@@ -12,3 +12,4 @@ An affordable, highly customizable Augmentative and Alternative Communication (A
 - [Homepage](https://aacspeech.app)
 - [Google Play Store](https://play.google.com/store/apps/details?id=com.cm.aac)
 - [Amazon Appstore](https://www.amazon.com/dp/B0GJTDZ4CJ)
+- [Apple Store](https://apps.apple.com/us/app/aac-speech-communication/id6797170253)

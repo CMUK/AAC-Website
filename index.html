@@ -9,7 +9,7 @@ layout: null
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0a1222" />
   <meta name="description"
-  content="Offline Augmentative and Alternative Communication (AAC) app for autism, speech disorders, and nonverbal communication. Create customizable symbol boards with text-to-speech. One-time purchase." /> 
+    content="Offline Augmentative and Alternative Communication (AAC) app for autism, speech disorders, and nonverbal communication. Create customizable symbol boards with text-to-speech. One-time purchase." />
   <meta name="keywords"
     content="AAC app, communication board, nonverbal communication, offline AAC, text to speech, symbol board, autism AAC, aphasia AAC, speech therapy app" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
@@ -18,7 +18,7 @@ layout: null
   <meta property="og:site_name" content="AAC Speech & Communication" />
   <meta property="og:title" content="AAC Speech & Communication" />
   <meta property="og:description"
-    content="Offline AAC boards, natural Android text-to-speech, custom symbol grids, and one-time premium unlocks for home, school, therapy, and everyday communication." />
+    content="Offline AAC boards, natural device text-to-speech, custom symbol grids, and one-time premium unlocks for home, school, therapy, and everyday communication." />
   <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/" />
   <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.webp" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -30,26 +30,27 @@ layout: null
   <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/icon.webp" />
   <title>AAC Speech & Communication | Offline AAC Board App</title>
 
-<!-- Preconnect Handshakes to Font Engines -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preconnect Handshakes to Font Engines -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<!-- Google Fonts Definition -->
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts Definition -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<!-- Core Production Theme Stylesheet -->
-<link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css" />
+  <!-- Core Production Theme Stylesheet -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css" />
 
-<script type="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "AAC Speech & Communication",
     "applicationCategory": "HealthApplication",
-    "operatingSystem": "Android",
+    "operatingSystem": "iOS, Android, Amazon Fire",
     "sameAs": [    
       "https://play.google.com/store/apps/details?id=com.cm.aac",
-      "https://www.amazon.com/dp/B0GJTDZ4CJ"
+      "https://www.amazon.com/dp/B0GJTDZ4CJ",
+      "https://apps.apple.com/us/app/aac-speech-communication/id6797170253"
     ],
     "description": "An offline Augmentative and Alternative Communication (AAC) app for autism, nonverbal communication, and speech disorders with customizable symbol boards.",
     "image": "{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.webp",
@@ -62,7 +63,7 @@ layout: null
     "downloadUrl": "{{ site.google_play_url }}",
     "featureList": [
       "Offline visual communication boards",
-      "Natural voice Android text-to-speech",
+      "Natural voice device text-to-speech",
       "Smart board creator automatic photo grid generation",
       "Printable AAC communication board PDF exports",
       "Inclusive accessibility options with highlight switch scanning",
@@ -77,22 +78,22 @@ layout: null
   }
 </script>
 
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "xh1k4rndvm");
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PF0Z9C9SZH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF0Z9C9SZH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-PF0Z9C9SZH');
-</script>
+    gtag('config', 'G-PF0Z9C9SZH');
+  </script>
 </head>
 
 <body>
@@ -103,7 +104,8 @@ layout: null
     <div class="shell header-bar">
       <a class="brand" href="#top" aria-label="AAC Speech & Communication home">
         <span class="brand-mark">
-          <img src="{{ site.baseurl }}/assets/icon.webp" width="54" height="54" alt="AAC Speech & Communication logo" aria-hidden="true" style="aspect-ratio: 1/1;" />
+          <img src="{{ site.baseurl }}/assets/icon.webp" width="54" height="54" alt="AAC Speech & Communication logo"
+            aria-hidden="true" style="aspect-ratio: 1/1;" />
         </span>
         <span class="brand-copy">
           <strong>AAC Speech & Communication</strong>
@@ -128,11 +130,30 @@ layout: null
               d="M12 1.8v2.4M12 19.8v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" />
           </svg>
         </button>
+        <div class="store-badge-link header-store-link store-badge-pending" aria-label="Apple Store - Coming Soon">
+          <img class="store-badge store-badge-header" width="260" height="80"
+            src="{{ site.baseurl }}/assets/apple-badge.webp" alt="Coming Soon on Apple App Store" />
+          <span class="badge-status-pill">Coming Soon</span>
+        </div>
+        <span class="header-store-text disabled-text">
+          Apple Store <small>(Coming Soon)</small>
+        </span>
+        <!-- <a class="store-badge-link header-store-link"
+          href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
+          target="_blank" rel="noopener" aria-label="Open on Apple Store">
+          <img class="store-badge store-badge-header" width="260" height="80"
+            src="{{ site.baseurl }}/assets/apple-badge.webp" alt="Get it on Apple Store" />
+        </a>
+        <a class="header-store-text"
+          href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
+          target="_blank" rel="noopener">
+          Apple Store
+        </a> -->
         <a class="store-badge-link header-store-link"
           href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
           target="_blank" rel="noopener" aria-label="Open on Google Play">
-          <img class="store-badge store-badge-header" width="260" height="80" src="{{ site.baseurl }}/assets/google-play-badge.webp"
-            alt="Get it on Google Play" />
+          <img class="store-badge store-badge-header" width="260" height="80"
+            src="{{ site.baseurl }}/assets/google-play-badge.webp" alt="Get it on Google Play" />
         </a>
         <a class="header-store-text"
           href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
@@ -142,8 +163,8 @@ layout: null
         <a class="store-badge-link header-store-link"
           href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=site_header&utm_campaign=desktop_nav"
           target="_blank" rel="noopener" aria-label="Open on Amazon">
-          <img class="store-badge store-badge-header" width="260" height="80" src="{{ site.baseurl }}/assets/amazon-badge.webp"
-            alt="Available at Amazon" />
+          <img class="store-badge store-badge-header" width="260" height="80"
+            src="{{ site.baseurl }}/assets/amazon-badge.webp" alt="Available at Amazon" />
         </a>
         <a class="header-store-text"
           href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=site_header&utm_campaign=desktop_nav"
@@ -167,21 +188,35 @@ layout: null
 
         <h1>Offline AAC Communication Board App</h1>
         <p class="lede">
-          Create and edit personalized symbol grids with voice clips, images, and natural Android text-to-speech. Our fully offline communication board app delivers reliable, subscription-free support for parents, teachers, and speech and language therapists (SLTs) helping autistic, nonverbal, and speech-delayed individuals find their voice.
+          Create and edit personalized symbol grids with voice clips, images, and natural device text-to-speech. Our
+          fully offline communication board app delivers reliable, subscription-free support for parents, teachers, and
+          speech and language therapists (SLTs) helping autistic, nonverbal, and speech-delayed individuals find their
+          voice.
         </p>
 
         <div class="hero-actions">
+          <div class="store-badge-link store-badge-pending" aria-label="Apple Store - Coming Soon">
+            <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260" height="80"
+              alt="Coming Soon on Apple App Store" />
+            <span class="badge-status-pill">Coming Soon</span>
+          </div>
+        <!-- <a class="store-badge-link"
+          href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter_banner%26utm_campaign%3Dscrolled_conversion"
+          target="_blank" rel="noopener" aria-label="Open on Apple Store">
+          <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260" height="80"
+            alt="Get it on Apple Store" />
+        </a> -->
           <a class="store-badge-link"
             href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dhero_section%26utm_campaign%3Dimmediate_download"
             target="_blank" rel="noopener" aria-label="Open on Google Play">
-            <img class="store-badge hero-store-badge" width="260" height="80" src="{{ site.baseurl }}/assets/google-play-badge.webp"
-              alt="Get it on Google Play" />
+            <img class="store-badge hero-store-badge" width="260" height="80"
+              src="{{ site.baseurl }}/assets/google-play-badge.webp" alt="Get it on Google Play" />
           </a>
           <a class="store-badge-link"
             href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=hero_section&utm_campaign=immediate_download"
             target="_blank" rel="noopener" aria-label="Open on Amazon">
-            <img class="store-badge hero-store-badge" width="260" height="80" src="{{ site.baseurl }}/assets/amazon-badge.webp"
-              alt="Available at Amazon" />
+            <img class="store-badge hero-store-badge" width="260" height="80"
+              src="{{ site.baseurl }}/assets/amazon-badge.webp" alt="Available at Amazon" />
           </a>
         </div>
 
@@ -279,114 +314,129 @@ layout: null
         <!-- Grid 1 -->
         <article class="feature-card">
 
-          <h3>          <div class="feature-icon" aria-hidden="true"
-            style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor">
-              <!-- Top Left Item -->
-              <rect x="3.75" y="3.75" width="7.5" height="7.5" rx="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <!-- Top Right Item -->
-              <rect x="12.75" y="3.75" width="7.5" height="7.5" rx="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <!-- Bottom Left Item -->
-              <rect x="3.75" y="12.75" width="7.5" height="7.5" rx="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <!-- Bottom Right Item -->
-              <rect x="12.75" y="12.75" width="7.5" height="7.5" rx="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>Custom Communication Grids</h3>
+          <h3>
+            <div class="feature-icon" aria-hidden="true"
+              style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <!-- Top Left Item -->
+                <rect x="3.75" y="3.75" width="7.5" height="7.5" rx="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <!-- Top Right Item -->
+                <rect x="12.75" y="3.75" width="7.5" height="7.5" rx="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <!-- Bottom Left Item -->
+                <rect x="3.75" y="12.75" width="7.5" height="7.5" rx="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <!-- Bottom Right Item -->
+                <rect x="12.75" y="12.75" width="7.5" height="7.5" rx="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>Custom Communication Grids
+          </h3>
           <p>Design personalized layouts with communication symbols, photos, voice clips, and clear text labels.</p>
         </article>
 
         <!-- Grid 2 -->
         <article class="feature-card">
-          <h3><div class="feature-icon" aria-hidden="true"
-            style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 7.5a.75.75 0 0 1 .75-.75h3.19l4.72-4.72a.75.75 0 0 1 1.28.53v18.58a.75.75 0 0 1-1.28.53l-4.72-4.72H7.5a.75.75 0 0 1-.75-.75V7.5Z" />
-            </svg>
-          </div>Natural Voice & Sentence Building</h3>
-          <p>Tap communication tiles to build full sentences instantly using high-quality Android text-to-speech output.
+          <h3>
+            <div class="feature-icon" aria-hidden="true"
+              style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 7.5a.75.75 0 0 1 .75-.75h3.19l4.72-4.72a.75.75 0 0 1 1.28.53v18.58a.75.75 0 0 1-1.28.53l-4.72-4.72H7.5a.75.75 0 0 1-.75-.75V7.5Z" />
+              </svg>
+            </div>Natural Voice & Sentence Building
+          </h3>
+          <p>Tap communication tiles to build full sentences instantly using high-quality built-in device text-to-speech output.
           </p>
         </article>
 
         <!-- Grid 3 -->
         <article class="feature-card">
-          <h3><div class="feature-icon" aria-hidden="true"
-            style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-16.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-16.25v14.25" />
-            </svg>
-          </div>
-          Pre-made AAC Topic Boards</h3>
+          <h3>
+            <div class="feature-icon" aria-hidden="true"
+              style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-16.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-16.25v14.25" />
+              </svg>
+            </div>
+            Pre-made AAC Topic Boards
+          </h3>
           <p>Get started right away with structured grids for home, school, tracking emotions, daily activities, and
             food requirements.</p>
         </article>
 
         <!-- Grid 4 -->
         <article class="feature-card">
-          <h3><div class="feature-icon" aria-hidden="true"
-            style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
-            </svg>
-          </div>
-          Flexible Grid Settings</h3>
+          <h3>
+            <div class="feature-icon" aria-hidden="true"
+              style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+              </svg>
+            </div>
+            Flexible Grid Settings
+          </h3>
           <p>Create up to 3 specialized custom speech boards completely free, or upgrade to manage a fully unlimited
             setup.</p>
         </article>
 
         <!-- Grid 5 -->
         <article class="feature-card">
-          <h3><div class="feature-icon" aria-hidden="true"
-            style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.602 10.602Z" />
-            </svg>
-          </div>
-          Mulberry Symbol Library</h3>
+          <h3>
+            <div class="feature-icon" aria-hidden="true"
+              style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.602 10.602Z" />
+              </svg>
+            </div>
+            Mulberry Symbol Library
+          </h3>
           <p>Instantly search thousands of open-source Mulberry SVG vector symbols, or smoothly import personal images.
           </p>
         </article>
 
         <!-- Grid 6 -->
         <article class="feature-card">
-          <h3><div class="feature-icon" aria-hidden="true"
-            style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M10.05 4.575a1.575 1.575 0 1 0-3.15 0v1.95H5.175a1.575 1.575 0 1 0 0 3.15h1.725v6.525A3.075 3.075 0 0 0 9.975 19.5h3.9a3.075 3.075 0 0 0 3.075-3.075V14.7a1.575 1.575 0 1 0-3.15 0v1.725c0 .249-.201.45-.45.45h-3.9a.45.45 0 0 1-.45-.45V9.675h5.175a1.575 1.575 0 1 0 0-3.15H10.05V4.575Z" />
-            </svg>
-          </div>
-          Inclusive Accessibility Tools</h3>
+          <h3>
+            <div class="feature-icon" aria-hidden="true"
+              style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10.05 4.575a1.575 1.575 0 1 0-3.15 0v1.95H5.175a1.575 1.575 0 1 0 0 3.15h1.725v6.525A3.075 3.075 0 0 0 9.975 19.5h3.9a3.075 3.075 0 0 0 3.075-3.075V14.7a1.575 1.575 0 1 0-3.15 0v1.725c0 .249-.201.45-.45.45h-3.9a.45.45 0 0 1-.45-.45V9.675h5.175a1.575 1.575 0 1 0 0-3.15H10.05V4.575Z" />
+              </svg>
+            </div>
+            Inclusive Accessibility Tools
+          </h3>
           <p>Configured with switch scanning, high-contrast options, font adjustments, and protective cream
             glare-reduction backgrounds.</p>
         </article>
 
         <!-- Grid 7 -->
         <article class="feature-card">
-          <h3><div class="feature-icon" aria-hidden="true"
-            style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor">
-              <circle cx="12" cy="12" r="10" />
-              <path stroke-linecap="round" stroke-linejoin="round" 
-                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg>
-          </div>
-          Global Multilingual Support</h3>
-          <p>Communicate effortlessly across 12 different languages including English, Español, Français, Deutsch, Italiano, Português, हिंदी, Русский, 中文, 日本語, 한국어, and العربية.</p>
+          <h3>
+            <div class="feature-icon" aria-hidden="true"
+              style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <circle cx="12" cy="12" r="10" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            </div>
+            Global Multilingual Support
+          </h3>
+          <p>Communicate effortlessly across 12 different languages including English, Español, Français, Deutsch,
+            Italiano, Português, हिंदी, Русский, 中文, 日本語, 한국어, and العربية.</p>
         </article>
       </div>
     </section>
@@ -430,7 +480,8 @@ layout: null
         <p class="eyebrow">Example</p>
         <h2>See how the app supports everyday communication.</h2>
         <p>
-          From quick requests to fuller sentences, the same board can fit into family routines, classrooms, and therapy sessions.
+          From quick requests to fuller sentences, the same board can fit into family routines, classrooms, and therapy
+          sessions.
         </p>
       </div>
 
@@ -496,6 +547,7 @@ layout: null
               <li>Full access to Mulberry symbol library</li>
               <li>Custom voice clips, photos, and text tiles</li>
               <li>Printable PDF board exports</li>
+              <li>Offline board backup & cross-device restore</li>
             </ul>
           </div>
           <div class="premium-column premium-featured">
@@ -511,7 +563,9 @@ layout: null
               <li class="inline-badge-li">
                 <span class="badge-standout">Standout Feature</span>
                 <div class="badge-feature-text">
-                <strong>Smart Board Creator:</strong> Take a photo to instantly turn paper communication boards and symbol worksheets into interactive digital layouts. The built-in scanner flags items, crops grids automatically, and generates a fully working AAC tool in seconds.
+                  <strong>Smart Board Creator:</strong> Take a photo to instantly turn paper communication boards and
+                  symbol worksheets into interactive digital layouts. The built-in scanner flags items, crops grids
+                  automatically, and generates a fully working AAC tool in seconds.
                 </div>
               </li>
             </ul>
@@ -543,15 +597,29 @@ layout: null
         <h2>Start with free communication tools, then unlock advanced AAC features when you need them.</h2>
       </div>
       <div class="store-badge-row">
+
+        <div class="store-badge-link store-badge-pending" aria-label="Apple Store - Coming Soon">
+          <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260" height="80"
+            alt="Coming Soon on Apple App Store" />
+          <span class="badge-status-pill">Coming Soon</span>
+        </div>
+        <!-- <a class="store-badge-link"
+          href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter_banner%26utm_campaign%3Dscrolled_conversion"
+          target="_blank" rel="noopener" aria-label="Open on Apple Store">
+          <img class="store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260" height="80"
+            alt="Get it on Apple Store" />
+        </a> -->
         <a class="store-badge-link"
           href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter_banner%26utm_campaign%3Dscrolled_conversion"
           target="_blank" rel="noopener" aria-label="Open on Google Play">
-          <img class="store-badge" src="{{ site.baseurl }}/assets/google-play-badge.webp" width="260" height="80" alt="Get it on Google Play" />
+          <img class="store-badge" src="{{ site.baseurl }}/assets/google-play-badge.webp" width="260" height="80"
+            alt="Get it on Google Play" />
         </a>
         <a class="store-badge-link"
           href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=footer_banner&utm_campaign=scrolled_conversion"
           target="_blank" rel="noopener" aria-label="Open on Amazon">
-          <img class="store-badge" src="{{ site.baseurl }}/assets/amazon-badge.webp" width="260" height="80" alt="Available at Amazon" />
+          <img class="store-badge" src="{{ site.baseurl }}/assets/amazon-badge.webp" width="260" height="80"
+            alt="Available at Amazon" />
         </a>
       </div>
     </section>
@@ -559,11 +627,46 @@ layout: null
 
   <footer class="site-footer shell">
     <p>© AAC Speech & Communication. Offline AAC support for everyday communication.</p>
-    <a href="#top">Back to top</a>
+    <div class="footer-actions">
+      <a href="#top">Back to top</a>
+      <button class="footer-contact-button" type="button" data-contact-open>Contact Support</button>
+    </div>
     <nav class="footer-nav">
       <a href="{{ site.baseurl }}/resources/">Resources & Guides</a>
     </nav>
   </footer>
+
+  <dialog class="contact-dialog" data-contact-dialog aria-labelledby="contact-dialog-title">
+    <div class="contact-dialog-panel">
+      <div class="contact-dialog-header">
+        <div>
+          <p class="eyebrow">Contact us</p>
+          <h2 id="contact-dialog-title">Send us a message</h2>
+        </div>
+        <button class="contact-close" type="button" data-contact-close aria-label="Close contact form">Close</button>
+      </div>
+
+      <form id="contact-form" class="contact-form" method="POST" action="https://api.web3forms.com/submit">
+        <input type="hidden" name="access_key" value="d9b1c1d7-b7a4-4505-8a8a-2e74f966d7f8" />
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Your name" required />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
+        </label>
+        <div class="h-captcha" data-captcha="true" style="margin: 1rem 0;"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </dialog>
 
   <dialog class="fullscreen-viewer" data-fullscreen>
     <button class="fullscreen-close" type="button" data-close aria-label="Close full screen view">Close</button>
@@ -576,6 +679,11 @@ layout: null
       const carousels = Array.from(document.querySelectorAll('[data-carousel]'));
       const fullscreen = document.querySelector('[data-fullscreen]');
       const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+      const contactDialog = document.querySelector('[data-contact-dialog]');
+      const contactOpenButton = document.querySelector('[data-contact-open]');
+      const contactCloseButton = document.querySelector('[data-contact-close]');
+      const contactForm = document.getElementById('contact-form');
+      const contactSubmitButton = contactForm?.querySelector('button[type="submit"]');
 
       if (!themeToggle || !fullscreen) {
         return;
@@ -772,6 +880,88 @@ layout: null
         }
       });
 
+      function closeContactDialog() {
+        if (!contactDialog) return;
+
+        if (typeof contactDialog.close === 'function') {
+          contactDialog.close();
+        } else {
+          contactDialog.removeAttribute('open');
+        }
+        document.body.classList.remove('contact-dialog-open');
+      }
+
+      function openContactDialog() {
+        if (!contactDialog) return;
+
+        if (typeof contactDialog.show === 'function') {
+          contactDialog.show();
+        } else {
+          contactDialog.setAttribute('open', 'open');
+        }
+        document.body.classList.add('contact-dialog-open');
+      }
+
+      if (contactDialog && contactOpenButton) {
+        contactOpenButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          openContactDialog();
+        });
+      }
+
+      if (contactCloseButton && contactDialog) {
+        contactCloseButton.addEventListener('click', closeContactDialog);
+      }
+
+      if (contactDialog) {
+        contactDialog.addEventListener('click', (event) => {
+          if (event.target === contactDialog) {
+            closeContactDialog();
+          }
+        });
+      }
+
+      if (contactForm && contactSubmitButton) {
+        contactForm.addEventListener('submit', async (event) => {
+          event.preventDefault();
+
+          const originalText = contactSubmitButton.textContent;
+          contactSubmitButton.textContent = 'Sending...';
+          contactSubmitButton.disabled = true;
+
+          // Build plain JSON object from Form Data
+          const formData = new FormData(contactForm);
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+
+          try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: json
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+              alert('Success! Your message has been sent.');
+              contactForm.reset();
+              closeContactDialog();
+            } else {
+              alert('Error: ' + (data.message || 'Unable to send your message.'));
+            }
+          } catch (error) {
+            alert('Something went wrong. Please try again.');
+          } finally {
+            contactSubmitButton.textContent = originalText;
+            contactSubmitButton.disabled = false;
+          }
+        });
+      }
+
       // Initializations
       setTheme(currentTheme);
 
@@ -815,6 +1005,7 @@ layout: null
 
     })();
   </script>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 
 </html>

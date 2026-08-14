@@ -41,7 +41,7 @@ layout: null
   </url>
   <!-- Article 5 -->
   <url>
-    <loc>{{ site.url }}{{ site.baseurl }}/resources/affordable-proloquo2go-alternative-android-fire-tablet.html</loc>
+    <loc>{{ site.url }}{{ site.baseurl }}/resources/affordable-proloquo2go-alternative-ipad-ios-android.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
