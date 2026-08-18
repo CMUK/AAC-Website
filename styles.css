@@ -1354,7 +1354,7 @@ body.contact-dialog-open::before {
   background: var(--panel-strong);
   color: var(--text);
   box-shadow: var(--shadow);
-  z-index: 10;
+  z-index: 200;
 }
 
 .contact-dialog:not([open]) {
@@ -2033,6 +2033,7 @@ html[data-theme="dark"] .article-content li strong {
     width: min(90vw, 520px);
     max-height: 90vh;
     overflow-y: auto;
+    z-index: 200;
   }
 
   .contact-dialog-panel {

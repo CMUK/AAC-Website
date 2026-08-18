@@ -90,25 +90,17 @@ layout: null
                             d="M12 1.8v2.4M12 19.8v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" />
                     </svg>
                 </button>
-                <div class="store-badge-link header-store-link store-badge-pending" aria-label="Apple Store - Coming Soon">
-                    <img class="store-badge store-badge-header" width="260" height="80"
-                        src="{{ site.baseurl }}/assets/apple-badge.webp" alt="Coming Soon on Apple App Store" />
-                    <span class="badge-status-pill">Coming Soon</span>
-                </div>
-                <span class="header-store-text disabled-text">
-                    Apple Store <small>(Coming Soon)</small>
-                </span>
-                <!-- <a class="store-badge-link header-store-link"
-                href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
+                <a class="store-badge-link header-store-link"
+                href="{{ site.apple_store_url }}?referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
                 target="_blank" rel="noopener" aria-label="Open on Apple Store">
                 <img class="store-badge store-badge-header" width="260" height="80"
                     src="{{ site.baseurl }}/assets/apple-badge.webp" alt="Get it on Apple Store" />
                 </a>
                 <a class="header-store-text"
-                href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
+                href="{{ site.apple_store_url }}?referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
                 target="_blank" rel="noopener">
                 Apple Store
-                </a> -->
+                </a>
                 <a class="store-badge-link header-store-link"
                     href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dsite_header%26utm_campaign%3Ddesktop_nav"
                     target="_blank" rel="noopener" aria-label="Open on Google Play">
@@ -213,17 +205,12 @@ layout: null
             <h2>Start with free communication tools, then unlock advanced AAC features when you need them.</h2>
         </div>
         <div class="store-badge-row">
-            <div class="store-badge-link store-badge-pending" aria-label="Apple Store - Coming Soon">
-                <img class="store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260" height="80"
-                    alt="Coming Soon on Apple App Store" />
-                <span class="badge-status-pill">Coming Soon</span>
-            </div>
-            <!-- <a class="store-badge-link"
-                href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter_banner%26utm_campaign%3Dscrolled_conversion"
+            <a class="store-badge-link"
+                href="{{ site.apple_store_url }}?referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter_banner%26utm_campaign%3Dscrolled_conversion"
                 target="_blank" rel="noopener" aria-label="Open on Apple Store">
                 <img class="store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260" height="80"
                     alt="Get it on Apple Store" />
-            </a> -->
+            </a>
             <a class="store-badge-link"
                 href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dresources_index%26utm_campaign%3Dscrolled_conversion"
                 target="_blank" rel="noopener" aria-label="Open on Google Play">
@@ -240,7 +227,138 @@ layout: null
     </section>
     <footer class="site-footer shell">
         <p>© AAC Speech & Communication. Practical offline utilities for nonverbal communication assistance.</p>
+        <div class="footer-actions">
+            <a href="#top">Back to top</a>
+            <button class="footer-contact-button" type="button" data-contact-open>Contact Support</button>
+        </div>
+        <nav class="footer-nav">
+            <a href="{{ site.baseurl }}/resources/">Resources & Guides</a>
+        </nav>
     </footer>
+
+    <dialog class="contact-dialog" data-contact-dialog aria-labelledby="contact-dialog-title">
+        <div class="contact-dialog-panel">
+            <div class="contact-dialog-header">
+                <div>
+                    <p class="eyebrow">Contact us</p>
+                    <h2 id="contact-dialog-title">Send us a message</h2>
+                </div>
+                <button class="contact-close" type="button" data-contact-close aria-label="Close contact form">Close</button>
+            </div>
+
+            <form id="contact-form" class="contact-form" method="POST" action="https://api.web3forms.com/submit">
+                <input type="hidden" name="access_key" value="d9b1c1d7-b7a4-4505-8a8a-2e74f966d7f8" />
+                <label>
+                    <span>Name</span>
+                    <input type="text" name="name" placeholder="Your name" required />
+                </label>
+
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="you@example.com" required />
+                </label>
+
+                <label>
+                    <span>Message</span>
+                    <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
+                </label>
+                <div class="h-captcha" data-captcha="true" style="margin: 1rem 0;"></div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </dialog>
+
+    <script>
+        (() => {
+            const contactDialog = document.querySelector('[data-contact-dialog]');
+            const contactOpenButton = document.querySelector('[data-contact-open]');
+            const contactCloseButton = document.querySelector('[data-contact-close]');
+            const contactForm = document.getElementById('contact-form');
+            const contactSubmitButton = contactForm?.querySelector('button[type="submit"]');
+
+            function closeContactDialog() {
+                if (!contactDialog) return;
+
+                if (typeof contactDialog.close === 'function') {
+                    contactDialog.close();
+                } else {
+                    contactDialog.removeAttribute('open');
+                }
+                document.body.classList.remove('contact-dialog-open');
+            }
+
+            function openContactDialog() {
+                if (!contactDialog) return;
+
+                if (typeof contactDialog.show === 'function') {
+                    contactDialog.show();
+                } else {
+                    contactDialog.setAttribute('open', 'open');
+                }
+                document.body.classList.add('contact-dialog-open');
+            }
+
+            if (contactDialog && contactOpenButton) {
+                contactOpenButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    openContactDialog();
+                });
+            }
+
+            if (contactCloseButton && contactDialog) {
+                contactCloseButton.addEventListener('click', closeContactDialog);
+            }
+
+            if (contactDialog) {
+                contactDialog.addEventListener('click', (event) => {
+                    if (event.target === contactDialog) {
+                        closeContactDialog();
+                    }
+                });
+            }
+
+            if (contactForm && contactSubmitButton) {
+                contactForm.addEventListener('submit', async (event) => {
+                    event.preventDefault();
+
+                    const originalText = contactSubmitButton.textContent;
+                    contactSubmitButton.textContent = 'Sending...';
+                    contactSubmitButton.disabled = true;
+
+                    const formData = new FormData(contactForm);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+
+                    try {
+                        const response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: json
+                        });
+
+                        const data = await response.json();
+
+                        if (data.success) {
+                            alert('Success! Your message has been sent.');
+                            contactForm.reset();
+                            closeContactDialog();
+                        } else {
+                            alert('Error: ' + (data.message || 'Unable to send your message.'));
+                        }
+                    } catch (error) {
+                        alert('Something went wrong. Please try again.');
+                    } finally {
+                        contactSubmitButton.textContent = originalText;
+                        contactSubmitButton.disabled = false;
+                    }
+                });
+            }
+        })();
+    </script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 
 </html>
