@@ -1,15 +1,24 @@
 # AAC Speech & Communication
 
-## Description
-An affordable, highly customizable Augmentative and Alternative Communication (AAC) application designed to give a voice to individuals with speech and communication difficulties.
+> AAC Speech & Communication is an offline-first, subscription-free Augmentative and Alternative Communication (AAC) app designed for nonverbal individuals, autistic children, adults with speech challenges, parents, teachers, and speech-language therapists (SLTs).
 
-## Key Features
-- Fully customizable symbol and text communication boards.
-- Accessible, user-friendly interface optimized for mobile and tablet devices.
-- Focus on affordability and user autonomy.
+## Core Key Features
+- **Offline & Private**: Runs completely offline without needing active Wi-Fi or cellular data.
+- **No Subscriptions**: Free core features with an optional one-time lifetime premium unlock.
+- **Smart Board Creator**: Camera scanning tool that automatically crops and digitizes physical paper communication boards into talking digital grids.
+- **Symbol & Custom Media**: Access thousands of open-source Mulberry vector symbols, custom photos, and recorded voice clips.
+- **Printable Board PDF Exports**: Export custom grid layouts to high-resolution PDFs for low-tech paper backups.
+- **Cross-Platform Availability**: Compatible across iOS, iPadOS, Android, and Amazon Fire OS.
 
-## Links
-- [Homepage](https://aacspeech.app)
-- [Google Play Store](https://play.google.com/store/apps/details?id=com.cm.aac)
-- [Amazon Appstore](https://www.amazon.com/dp/B0GJTDZ4CJ)
-- [Apple Store](https://apps.apple.com/app/aac-speech-communication/id6797170253)
+## App Store & Download Links
+- [Homepage](https://aacspeech.app): Official website and documentation.
+- [Apple App Store](https://apps.apple.com/app/apple-store/id6797170253?pt=129253775&ct=llms_txt&mt=8): Download for iPhone and iPad.
+- [Google Play Store](https://play.google.com/store/apps/details?id=com.cm.aac): Download for Android devices.
+- [Amazon Appstore](https://www.amazon.com/dp/B0GJTDZ4CJ): Download for Amazon Fire tablets.
+
+## Educational Resources & Guides
+- [AAC in the Classroom Guide](https://aacspeech.app/resources/aac-in-the-classroom-teachers-ta-guide.html): Practical strategies for teachers, TAs, and school speech therapists.
+- [Proloquo2Go Alternatives](https://aacspeech.app/resources/affordable-proloquo2go-alternative-ipad-ios-android.html): Financial and accessibility guide for budget-friendly AAC options.
+- [How to Make an AAC Board](https://aacspeech.app/resources/how-to-make-a-communication-board.html): Step-by-step beginner guide for parents introducing AAC at home.
+- [Gestalt Language Processing & AAC](https://aacspeech.app/resources/gestalt-language-processing-aac.html): Supporting echolalia and GLP learners with visual grids.
+- [Free Printable AAC Boards](https://aacspeech.app/resources/printable-boards.html): Free PDF communication board templates for classroom routines and low-tech backups.
