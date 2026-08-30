@@ -187,12 +187,12 @@ layout: null
         </p>
 
         <div class="hero-actions">
-        <a class="store-badge-link"
-          href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter_banner%26utm_campaign%3Dscrolled_conversion"
-          target="_blank" rel="noopener" aria-label="Open on Apple Store">
-          <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260" height="80"
-            alt="Get it on Apple Store" />
-        </a>
+          <a class="store-badge-link"
+            href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter_banner%26utm_campaign%3Dscrolled_conversion"
+            target="_blank" rel="noopener" aria-label="Open on Apple Store">
+            <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260"
+              height="80" alt="Get it on Apple Store" />
+          </a>
           <a class="store-badge-link"
             href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dhero_section%26utm_campaign%3Dimmediate_download"
             target="_blank" rel="noopener" aria-label="Open on Google Play">
@@ -208,9 +208,10 @@ layout: null
         </div>
 
         <ul class="hero-points" aria-label="Highlights">
-          <li>Fully offline</li>
           <li>One-time premium unlock</li>
           <li>Built for accessibility</li>
+          <li>No Adverts</li>
+          <li>Full Privacy</li>
         </ul>
       </div>
 
@@ -336,7 +337,8 @@ layout: null
               </svg>
             </div>Natural Voice & Sentence Building
           </h3>
-          <p>Tap communication tiles to build full sentences instantly using high-quality built-in device text-to-speech output.
+          <p>Tap communication tiles to build full sentences instantly using high-quality built-in device text-to-speech
+            output.
           </p>
         </article>
 
@@ -578,6 +580,92 @@ layout: null
       </div>
     </section>
 
+    <section class="shell section" id="testimonials">
+      <div class="section-heading testimonial-heading-row">
+        <div>
+          <p class="eyebrow">User Feedback</p>
+          <h2>Loved by families, SLTs, and educators.</h2>
+          <p>Read real experiences shared by users.</p>
+        </div>
+      </div>
+
+      <div class="testimonial-carousel-wrapper">
+        <div class="testimonial-track" id="testimonialTrack">
+          <!-- Card 1 -->
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "This app is amazing and the full version is fairly priced at less than $10. Thank you so much for making
+              this. As a first time dad, with a son who is experiencing speech delays this app really is a life saver."
+            </p>
+            <div class="testimonial-author">
+              <strong>Verified User</strong>
+              <span>Google Play Store Review</span>
+            </div>
+          </article>
+
+          <!-- Card 2 (Featured Center) -->
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "So far this seems like exactly what I needed! I'm new to trying to set up an AAC but my Son is slightly
+              delayed and has shown interest in wanting one for home. I'm very impressed so far."
+            </p>
+            <div class="testimonial-author">
+              <strong>Verified User</strong>
+              <span>Google Play Store Review</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Thank you for making this app. Making this app part of our daily routine. It is really easy to navigate
+              and user friendly for communication and visual cues. HIGHLY RECOMMENDED."
+            </p>
+            <div class="testimonial-author">
+              <strong>Verified User</strong>
+              <span>Google Play Store Review</span>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "So far I really like this app. Such a fair price for the paid version. Thanks for making it affordable
+              and actually useful. We are using it for our non verbal kid on the onn kids tablet and it works great.
+              Play with it for a day and you'll be a pro at setting up different speech communication boards."
+            </p>
+            <div class="testimonial-author">
+              <strong>Verified User</strong>
+              <span>Google Play Store Review</span>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Best one out here. You get so much for free."
+            </p>
+            <div class="testimonial-author">
+              <strong>Verified User</strong>
+              <span>Google Play Store Review</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- 3. Navigation Controls (Lives at root level inside #testimonials) -->
+      <div class="testimonial-nav-btns">
+        <button class="testimonial-nav-btn" id="testimonialPrev" aria-label="Previous review">‹</button>
+        <button class="testimonial-nav-btn" id="testimonialNext" aria-label="Next review">›</button>
+      </div>
+    </section>
+
+
+
     <section class="shell cta-banner" id="download" aria-label="Download call to action">
       <div>
         <p class="eyebrow">Download the AAC App</p>
@@ -587,8 +675,8 @@ layout: null
         <a class="store-badge-link"
           href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter_banner%26utm_campaign%3Dscrolled_conversion"
           target="_blank" rel="noopener" aria-label="Open on Apple Store">
-          <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260" height="80"
-            alt="Get it on Apple Store" />
+          <img class="store-badge hero-store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260"
+            height="80" alt="Get it on Apple Store" />
         </a>
         <a class="store-badge-link"
           href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dfooter_banner%26utm_campaign%3Dscrolled_conversion"
@@ -983,6 +1071,118 @@ layout: null
         }
       });
 
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const track = document.getElementById('testimonialTrack');
+        const cards = track?.querySelectorAll('.testimonial-card');
+        const prevBtn = document.getElementById('testimonialPrev');
+        const nextBtn = document.getElementById('testimonialNext');
+
+        if (!track || !cards || !cards.length) return;
+
+        let isDragging = false;
+
+        // Highlights whichever card is nearest to the track's left boundary
+        function updateActiveCard() {
+          const trackLeft = track.getBoundingClientRect().left;
+          const maxScroll = track.scrollWidth - track.clientWidth;
+
+          // Edge-case check: highlight final card if scrolled to absolute track end
+          if (Math.ceil(track.scrollLeft) >= maxScroll - 5) {
+            cards.forEach((c) => c.classList.remove('is-active'));
+            cards[cards.length - 1].classList.add('is-active');
+            return;
+          }
+
+          let closestCard = cards[0];
+          let minDistance = Infinity;
+
+          cards.forEach((card) => {
+            const cardLeft = card.getBoundingClientRect().left;
+            const distance = Math.abs(trackLeft - cardLeft);
+
+            if (distance < minDistance) {
+              minDistance = distance;
+              closestCard = card;
+            }
+          });
+
+          cards.forEach((c) => c.classList.remove('is-active'));
+          closestCard.classList.add('is-active');
+        }
+
+        // 1. Direct Card Click Selection (Uses native scrollIntoView)
+        cards.forEach((card) => {
+          card.addEventListener('click', (e) => {
+            if (isDragging) return; // Prevent selection shift during mouse drag
+
+            card.scrollIntoView({
+              behavior: 'smooth',
+              inline: 'start',
+              block: 'nearest'
+            });
+          });
+        });
+
+        // 2. Arrow Controls
+        prevBtn?.addEventListener('click', () => {
+          track.scrollBy({ left: -360, behavior: 'smooth' });
+        });
+
+        nextBtn?.addEventListener('click', () => {
+          track.scrollBy({ left: 360, behavior: 'smooth' });
+        });
+
+        // 3. Desktop Mouse Drag-to-Scroll Logic
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        track.addEventListener('mousedown', (e) => {
+          isDown = true;
+          isDragging = false;
+          startX = e.pageX - track.offsetLeft;
+          scrollLeft = track.scrollLeft;
+        });
+
+        track.addEventListener('mouseleave', () => {
+          isDown = false;
+        });
+
+        track.addEventListener('mouseup', () => {
+          isDown = false;
+          setTimeout(() => { isDragging = false; }, 50);
+        });
+
+        track.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          const x = e.pageX - track.offsetLeft;
+          const walk = (x - startX) * 1.5;
+
+          if (Math.abs(walk) > 5) {
+            isDragging = true;
+          }
+
+          e.preventDefault();
+          track.scrollLeft = scrollLeft - walk;
+        });
+
+        // 4. Update highlights on scroll
+        let isTicking = false;
+        track.addEventListener('scroll', () => {
+          if (!isTicking) {
+            window.requestAnimationFrame(() => {
+              updateActiveCard();
+              isTicking = false;
+            });
+            isTicking = true;
+          }
+        }, { passive: true });
+
+        // Initial load alignment
+        track.scrollLeft = 0;
+        cards[0].classList.add('is-active');
+      });
 
     })();
   </script>
