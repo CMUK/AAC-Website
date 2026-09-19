@@ -284,16 +284,38 @@ html[data-theme="light"] .mobile-get-pill {
 /* --- Mobile Specific Refinements --- */
 @media (max-width: 720px) {
 
-  /* Forces the header title and badge to stay aligned on a single row */
+
+
+  /* 1. Stack or space out the header elements neatly on mobile */
   .premium-header {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.6rem !important;
+    margin-bottom: 1rem !important;
   }
 
+    /* 2. Scale down the pill badge so it doesn't overpower the heading */
+  .premium-header .price-pill {
+    font-size: 0.72rem !important;
+    padding: 0.25rem 0.65rem !important;
+    width: fit-content !important; /* Prevents pill from stretching full width */
+    display: inline-block !important;
+  }
+
+  /* 3. Ensure the heading fits on one line */
   .premium-header h3 {
-    font-size: 1.2rem;
-    /* Tightens the font sizing so it never forces a wrap */
+    font-size: 1.25rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* 4. Give the inner card padding breathing room */
+  .premium-column {
+    padding: 1.1rem !important;
+  }
+
+  .inline-badge-li {
+    padding: 0.75rem !important;
+    margin-top: 0.85rem !important;
   }
 
 
@@ -786,8 +808,8 @@ html[data-theme="light"] .button-secondary {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 1.75rem; /* Slightly tighter gap between text and tablet image */
   align-items: center;
   padding: 4.5rem 0 2rem;
 }
@@ -814,15 +836,18 @@ html[data-theme="light"] .button-secondary {
 
 h1 {
   margin: 0;
-  font-size: clamp(2.55rem, 5vw, 4.65rem);
-  line-height: 1.05;
-  letter-spacing: -0.06em;
-  max-width: 13.5ch;
+  font-size: clamp(2.2rem, 4vw, 4.2rem); /* Slightly calibrated font size */
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  max-width: 100%; /* Allows heading text to fill available column width without clipping */
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
+/* Remove or update the media query override if present */
 @media (min-width: 961px) {
   h1 {
-    max-width: 22ch;
+    max-width: 100%;
   }
 }
 
@@ -883,9 +908,11 @@ html[data-theme="dark"] .section-heading p,
   justify-content: center;
 }
 
-.hero-carousel {
+/* Apply the expanded width ONLY to the carousel inside the hero section */
+.hero .hero-carousel {
   position: relative;
-  width: min(100%, 680px);
+  width: 100%;
+  max-width: 820px;
 }
 
 .life-section {
@@ -923,11 +950,11 @@ html[data-theme="light"] .trust-pill {
 }
 
 
+/* Remove or adjust inner border inset overlay */
 .carousel-frame::before {
   content: "";
   position: absolute;
-  inset: 0.9rem;
-  border-radius: 28px;
+  border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.09);
   pointer-events: none;
 }
@@ -935,7 +962,7 @@ html[data-theme="light"] .trust-pill {
 .carousel-slides {
   position: relative;
   aspect-ratio: 16 / 11;
-  border-radius: 26px;
+  border-radius: 22px;
   overflow: hidden;
   background: rgba(6, 10, 18, 0.85);
 }
@@ -964,11 +991,11 @@ html[data-theme="light"] .carousel-slides {
 }
 
 .carousel-slide img {
-  width: 100%;
-  height: 95%;
+  width: 100% !important;
+  height: 100% !important; /* Scaled up from 95% to fill the vertical frame completely */
   object-fit: contain;
   object-position: center;
-  border-radius: 24px;
+  border-radius: 20px;
   background: #050913;
   cursor: zoom-in;
 }
@@ -987,11 +1014,11 @@ html[data-theme="light"] .carousel-slide img {
   transition: width 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Reduce frame padding so the app screenshot fills more of the container */
 .carousel-frame {
   position: relative;
-  /* Anchor for our invisible split panels */
-  padding: 1rem;
-  border-radius: 36px;
+  padding: 0.35rem; /* Decreased from 1rem to eliminate dead space around the image */
+  border-radius: 28px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
   box-shadow: var(--shadow);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1048,16 +1075,87 @@ html[data-theme="light"] .carousel-nav {
 }
 
 .carousel-dot {
+  position: relative;
   width: 0.8rem;
   height: 0.8rem;
   padding: 0;
   border-radius: 999px;
   border: 0;
   background: rgba(255, 255, 255, 0.24);
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
+/* Creates a generous 44x44px invisible touch/click zone around each dot */
+.carousel-dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+}
+/* Hide arrows by default so the image is 100% unobstructed */
+.carousel-nav::after {
+  content: "‹";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(15, 28, 49, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  opacity: 0; /* Fully invisible by default */
+  transition: opacity 0.25 ease, transform 0.2s ease;
+  pointer-events: none;
+}
+/* Hide arrow overlays permanently */
+.carousel-nav::after {
+  display: none !important;
+}
+
+.nav-left::after {
+  content: "‹";
+  left: 0.75rem;
+}
+
+.nav-right::after {
+  content: "›";
+  right: 0.75rem;
+}
+/* Hide arrow overlays permanently */
+.carousel-nav::after {
+  display: none !important;
+}
+
+/* Reveal arrows softly only when the user hovers over the tablet area */
+.carousel-frame:hover .carousel-nav::after {
+  opacity: 0.85;
+}
+
+/* --- Light Mode Refinements --- */
+
+/* 1. Darken inactive pagination dots so they stand out against light backgrounds */
 html[data-theme="light"] .carousel-dot {
-  background: rgba(16, 24, 40, 0.18);
+  background: rgba(16, 24, 40, 0.28) !important;
+}
+
+/* 2. Give the tablet mockup a deeper shadow so it separates cleanly from the page */
+html[data-theme="light"] .hero .carousel-frame {
+  box-shadow: 0 20px 50px rgba(16, 24, 40, 0.14) !important;
+  border-color: rgba(16, 24, 40, 0.1) !important;
+}
+
+/* 3. Soften store badge contrast in light mode */
+html[data-theme="light"] .hero-actions .store-badge-link {
+  filter: drop-shadow(0 8px 18px rgba(16, 24, 40, 0.08));
 }
 
 .carousel-dot.is-active {
@@ -2987,4 +3085,38 @@ html[data-theme="light"] .contact-form input:focus-visible,
 html[data-theme="light"] .contact-form textarea:focus-visible {
   border-color: var(--brand-2);
   box-shadow: 0 0 0 3px rgba(48, 91, 227, 0.14);
+}
+
+.inline-badge-li {
+  margin-top: 1rem !important;
+  padding: 0.85rem !important;
+  border-radius: 12px;
+  background: rgba(255, 143, 112, 0.06);
+  border: 1px solid rgba(255, 143, 112, 0.2);
+  list-style: none; /* Removes the standard bullet dot for this block */
+}
+
+html[data-theme="light"] .inline-badge-li {
+  background: rgba(222, 86, 49, 0.05) !important;
+  border-color: rgba(222, 86, 49, 0.2) !important;
+}
+
+/* --- Light Mode Fixes for Premium Section --- */
+
+/* 1. Ensure high contrast for the One-Time Purchase pill in light mode */
+html[data-theme="light"] .premium-header .price-pill {
+  background: var(--brand-2, #305be3) !important;
+  color: #ffffff !important;
+}
+
+/* 2. Soft, high-contrast tint for the Standout Feature box in light mode */
+html[data-theme="light"] .inline-badge-li {
+  background: rgba(222, 86, 49, 0.08) !important;
+  border-color: rgba(222, 86, 49, 0.25) !important;
+}
+
+/* 3. Ensure the Standout Feature badge label stays legible */
+html[data-theme="light"] .inline-badge-li .badge-standout {
+  background: #de5631 !important;
+  color: #ffffff !important;
 }

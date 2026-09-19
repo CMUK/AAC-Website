@@ -41,32 +41,39 @@ layout: null
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css" />
 
   <script type="application/ld+json">
+[
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "MobileApplication",
     "name": "AAC Speech & Communication",
-    "applicationCategory": "HealthApplication",
-    "operatingSystem": "iOS, Android, Amazon Fire",
-    "sameAs": [    
+    "url": "https://aacspeech.app",
+    "applicationCategory": "CommunicationApplication",
+    "operatingSystem": "iOS, Android, Fire OS",
+    "inLanguage": ["en", "es", "fr", "de", "it", "pt", "hi", "ru", "zh", "ja", "ko", "ar"],
+    "sameAs": [
       "https://play.google.com/store/apps/details?id=com.cm.aac",
       "https://www.amazon.com/dp/B0GJTDZ4CJ",
-      "https://apps.apple.com/app/apple-store/id6797170253?pt=129253775&ct=Website&mt=8"
+      "https://apps.apple.com/app/id6797170253"
     ],
-    "description": "An offline Augmentative and Alternative Communication (AAC) app for autism, nonverbal communication, and speech disorders with customizable symbol boards.",
+    "description": "An offline Augmentative and Alternative Communication (AAC) app for autism, aphasia, nonverbal communication, and speech disorders, with customizable symbol boards and the Mulberry symbol library.",
     "image": "{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.webp",
+    "downloadUrl": "{{ site.google_play_url }}",
+    "installUrl": "{{ site.google_play_url }}",
     "offers": {
       "@type": "Offer",
       "price": "0.00",
       "priceCurrency": "USD",
       "description": "Free to download with a one-time premium unlock available in-app."
     },
-    "downloadUrl": "{{ site.google_play_url }}",
     "featureList": [
       "Offline visual communication boards",
       "Natural voice device text-to-speech",
-      "Smart board creator automatic photo grid generation",
+      "Custom communication grids with symbols, photos, and voice clips",
+      "Mulberry symbol library",
+      "Pre-made AAC topic boards",
       "Printable AAC communication board PDF exports",
-      "Inclusive accessibility options with highlight switch scanning",
+      "Switch scanning, high-contrast, and glare-reduction accessibility options",
+      "12 supported languages",
       "Premium cloud sync and smart board creation"
     ],
     "publisher": {
@@ -75,7 +82,38 @@ layout: null
       "url": "https://aacspeech.app",
       "logo": "{{ site.url }}{{ site.baseurl }}/assets/icon.webp"
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does this AAC app require an internet connection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. AAC Speech & Communication operates 100% offline. Custom symbol grids, device text-to-speech, and saved boards work completely without internet access."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a monthly subscription fee?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The app offers a free version with up to 3 custom boards, and a single one-time purchase to unlock unlimited custom boards and cloud sync forever."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is this AAC app designed for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This app is designed for autistic individuals, nonverbal children and adults, people recovering from stroke or traumatic brain injury (aphasia), and people with cerebral palsy, Down syndrome, ALS/MND, or speech delays. It is also suitable for parents, special education teachers, and speech-language pathologists (SLPs, also called speech and language therapists)."
+        }
+      }
+    ]
   }
+]
 </script>
 
   <script type="text/javascript">
@@ -325,7 +363,7 @@ layout: null
     <section class="shell section" id="features">
       <div class="section-heading">
         <p class="eyebrow">Core features</p>
-        <h2>Everything needed for fast, clear AAC support.</h2>
+        <h2>Essential AAC Features for Autism, Aphasia, and Speech Support</h2>
         <p>
           The free version gives you the essentials. Premium adds the advanced tools for faster
           setup, more flexibility, and cross-device workflows.
@@ -500,11 +538,11 @@ layout: null
 
     <section class="shell section life-section" id="life">
       <div class="section-heading">
-        <p class="eyebrow">Example</p>
-        <h2>See how the app supports everyday communication.</h2>
+        <p class="eyebrow">Examples</p>
+        <h2>AAC Communication Board Examples for Home, School, and Therapy</h2>
         <p>
-          From quick requests to fuller sentences, the same board can fit into family routines, classrooms, and therapy
-          sessions.
+          See how the app fits into daily life, from quick requests to fuller
+          sentences, across family routines, classrooms, and speech therapy sessions.
         </p>
       </div>
 
@@ -555,7 +593,7 @@ layout: null
       <div class="premium-panel">
         <div class="section-heading section-heading-tight">
           <p class="eyebrow">Premium</p>
-          <h2>One-time unlock. No subscription. All future updates included.</h2>
+          <h2>Affordable Lifetime AAC App No Monthly Subscriptions</h2>
           <p>
             Pay once and keep everything: unlimited boards, cloud sync, multiple profiles, camera scan, gallery import,
             and the standout smart board creator.
@@ -575,20 +613,20 @@ layout: null
           </div>
           <div class="premium-column premium-featured">
             <div class="premium-header">
-              <h3>Premium Unlock</h3>
+              <h3>Lifetime Unlock</h3>
+              <span class="price-pill" style="background: var(--brand); color: #050a12; padding: 0.35rem 0.8rem; border-radius: 999px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.02em;">
+                One-Time Purchase
+              </span>
             </div>
 
             <ul>
-              <li>Unlimited custom communication boards</li>
-              <li>Secure cloud backup and multi-device sync</li>
-              <li>Multi-profile management (Home, School, Therapy)</li>
-
+              <li><strong>Unlimited</strong> custom communication boards</li>
+              <li><strong>Secure Cloud Backup:</strong> Multi-device sync for home, school, & clinic</li>
+              <li><strong>Multi-Profile Management:</strong> Create separate, tailored setups for home, school, and therapy sessions.</li>
               <li class="inline-badge-li">
                 <span class="badge-standout">Standout Feature</span>
                 <div class="badge-feature-text">
-                  <strong>Smart Board Creator:</strong> Take a photo to instantly turn paper communication boards and
-                  symbol worksheets into interactive digital layouts. The built-in scanner flags items, crops grids
-                  automatically, and generates a fully working AAC tool in seconds.
+                  <strong>Smart Board Creator:</strong> Take a photo to instantly turn paper boards and worksheets into digital layouts automatically.
                 </div>
               </li>
             </ul>
@@ -689,6 +727,19 @@ layout: null
               <span>Google Play Store Review</span>
             </div>
           </article>
+
+          <!-- Card 6 -->
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "awesome app for my non verbal 4 year old daughter"
+            </p>
+            <div class="testimonial-author">
+              <strong>Verified User</strong>
+              <span>Google Play Store Review</span>
+            </div>
+          </article>
+
         </div>
       </div>
       <!-- 3. Navigation Controls (Lives at root level inside #testimonials) -->
