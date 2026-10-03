@@ -59,12 +59,19 @@ layout: null
     "image": "{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.webp",
     "downloadUrl": "{{ site.google_play_url }}",
     "installUrl": "{{ site.google_play_url }}",
-    "offers": {
-      "@type": "Offer",
-      "price": "0.00",
-      "priceCurrency": "USD",
-      "description": "Free to download with a one-time premium unlock available in-app."
-    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD",
+        "description": "Free to download with a one-time premium unlock available in-app."
+      },
+      {
+        "@type": "Offer",
+        "name": "Institutional & School Licensing",
+        "description": "Bulk purchase orders, invoice payments, and web entitlement links for school districts, clinics, and speech-language pathologists."
+      }
+    ],
     "featureList": [
       "Offline visual communication boards",
       "Natural voice device text-to-speech",
@@ -109,6 +116,14 @@ layout: null
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "This app is designed for autistic individuals, nonverbal children and adults, people recovering from stroke or traumatic brain injury (aphasia), and people with cerebral palsy, Down syndrome, ALS/MND, or speech delays. It is also suitable for parents, special education teachers, and speech-language pathologists (SLPs, also called speech and language therapists)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you support school purchase orders and volume licensing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer direct web billing, volume licensing, and custom invoice support for schools, school districts, and healthcare clinics. License keys and instant deep-link unlocks allow administrators to deploy entitlements seamlessly across managed devices."
         }
       }
     ]
@@ -633,6 +648,23 @@ layout: null
           </div>
         </div>
       </div>
+
+      <div class="institutional-banner">
+        <div style="max-width: 680px;">
+          <h3>
+            🏫 Licensing for Schools, Clinics & Therapy Practices?
+          </h3>
+          <p>
+            We support bulk volume licensing and web invoice payments (POs) for school districts, SLT/SLP practices, ABA clinics, and healthcare providers. Easily manage multi-device deployments with instant deep-link activation—no app store logins required.
+          </p>
+        </div>
+        <div>
+          <button class="footer-contact-button" type="button" data-contact-open>
+            Request Institutional & Practice PO
+          </button>
+        </div>
+      </div>
+
     </section>
 
     <section class="shell section" id="faq">
@@ -834,7 +866,7 @@ layout: null
       const fullscreen = document.querySelector('[data-fullscreen]');
       const themeColorMeta = document.querySelector('meta[name="theme-color"]');
       const contactDialog = document.querySelector('[data-contact-dialog]');
-      const contactOpenButton = document.querySelector('[data-contact-open]');
+      const contactOpenButtons = document.querySelectorAll('[data-contact-open]');
       const contactCloseButton = document.querySelector('[data-contact-close]');
       const contactForm = document.getElementById('contact-form');
       const contactSubmitButton = contactForm?.querySelector('button[type="submit"]');
@@ -1056,10 +1088,12 @@ layout: null
         document.body.classList.add('contact-dialog-open');
       }
 
-      if (contactDialog && contactOpenButton) {
-        contactOpenButton.addEventListener('click', (event) => {
-          event.preventDefault();
-          openContactDialog();
+      if (contactDialog && contactOpenButtons.length > 0) {
+        contactOpenButtons.forEach((button) => {
+          button.addEventListener('click', (event) => {
+            event.preventDefault();
+            openContactDialog();
+          });
         });
       }
 

@@ -18,6 +18,8 @@
 
 ## Educational Resources & Guides
 - [AAC in the Classroom Guide](https://aacspeech.app/resources/aac-in-the-classroom-teachers-ta-guide.html): Practical strategies for teachers, TAs, and school speech therapists.
+- [School Purchase Orders & Volume Purchasing](https://aacspeech.app/resources/how-to-purchase-aac-apps-school-purchase-orders.html): Procurement guide for school districts, special ed directors, and VPP MDM licensing.
+- [Deploying AAC Apps in SLT Clinics](https://aacspeech.app/resources/deploying-aac-apps-across-slt-clinics.html): Guide for SLPs and therapy practice managers on multi-client setups and HIPAA-friendly offline privacy.
 - [Proloquo2Go Alternatives](https://aacspeech.app/resources/affordable-proloquo2go-alternative-ipad-ios-android.html): Financial and accessibility guide for budget-friendly AAC options.
 - [How to Make an AAC Board](https://aacspeech.app/resources/how-to-make-a-communication-board.html): Step-by-step beginner guide for parents introducing AAC at home.
 - [Gestalt Language Processing & AAC](https://aacspeech.app/resources/gestalt-language-processing-aac.html): Supporting echolalia and GLP learners with visual grids.

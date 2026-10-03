@@ -51,4 +51,16 @@ layout: null
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- Article 7 -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/resources/how-to-purchase-aac-apps-school-purchase-orders.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- Article 8 -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/resources/deploying-aac-apps-across-slt-clinics.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
