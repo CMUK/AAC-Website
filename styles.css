@@ -302,10 +302,9 @@ html[data-theme="light"] .mobile-get-pill {
     display: inline-block !important;
   }
 
-  /* 3. Ensure the heading fits on one line */
+  /* 3. Ensure the heading fits on mobile */
   .premium-header h3 {
     font-size: 1.25rem !important;
-    white-space: nowrap !important;
   }
 
   /* 4. Give the inner card padding breathing room */
@@ -3155,6 +3154,28 @@ html[data-theme="light"] .inline-badge-li .badge-standout {
   white-space: nowrap;
   padding: 0.65rem 1.25rem;
   font-weight: 600;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 720px) {
+  .institutional-banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem 1rem;
+  }
+
+  .institutional-banner > div {
+    width: 100%;
+  }
+
+  .institutional-banner .footer-contact-button {
+    white-space: normal;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    line-height: 1.35;
+  }
 }
 
 /* Light mode visibility and border fix for Institutional Banner */
@@ -3196,4 +3217,26 @@ html[data-theme="light"] .premium-panel p a {
 html[data-theme="light"] .article-body a:hover,
 html[data-theme="light"] .premium-panel p a:hover {
   color: #056b60;
-}
+}
+
+
+/* CTA Arrow Hover Effect */
+.cta-arrow-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.65rem !important; /* Slightly wider spacing */
+}
+
+.cta-arrow-link .cta-arrow-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+  stroke-width: 2.75; /* Bolder line weight to match the text */
+  transition: transform 200ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cta-arrow-link:hover .cta-arrow-icon {
+    transform: translateX(4px);
+  }
+}
