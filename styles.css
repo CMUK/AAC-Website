@@ -810,7 +810,7 @@ html[data-theme="light"] .button-secondary {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   gap: 1.75rem; /* Slightly tighter gap between text and tablet image */
   align-items: center;
-  padding: 4.5rem 0 2rem;
+  padding: 2.5rem 0 2rem;
 }
 
 .hero-copy {
@@ -2417,7 +2417,7 @@ html[data-theme="light"] .eyebrow-accent {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  padding: 1rem calc(100% - 360px) 1.5rem 0.5rem;
+  padding: 1rem 0.5rem 1.5rem;
   scroll-padding-left: 0.5rem;
   scrollbar-width: none;
   cursor: grab;
@@ -2512,11 +2512,11 @@ html[data-theme="light"] .testimonial-nav-btn:hover {
 /* --- Desktop Layout (>= 721px) --- */
 @media (min-width: 721px) {
   #testimonials .testimonial-nav-btns {
-    position: absolute;
-    top: 2rem;
-    right: 0;
-    margin-top: 0;
-    gap: 0.5rem;
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
   }
 }
 
