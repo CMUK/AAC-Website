@@ -1,0 +1,227 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a1222" />
+    <meta name="description"
+        content="Learn why AAC communication board backups matter and how to export and restore a full app backup or an individual profile's boards." />
+    <meta name="keywords"
+        content="AAC backup, AAC board restore, back up communication boards, restore AAC app, export AAC boards, profile backup" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/resources/backup-and-restore-aac-boards.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to Back Up and Restore AAC Communication Boards" />
+    <meta property="og:description"
+        content="A practical guide to protecting AAC boards and restoring them from a full app backup or profile export." />
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.webp" />
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/icon.webp" />
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/icon.webp" />
+    <title>How to Back Up and Restore AAC Communication Boards | AAC Speech & Communication</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles.min.css" />
+    <script src="{{ site.baseurl }}/assets/js/theme.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "How to Back Up and Restore AAC Communication Boards",
+      "description": "A practical guide to protecting AAC boards and restoring them from a full app backup or profile export.",
+      "image": "{{ site.url }}{{ site.baseurl }}/assets/featureGraphic.webp",
+      "inLanguage": "en",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "AAC Speech & Communication"
+      }
+    }
+    </script>
+</head>
+
+<body id="top">
+    <div class="bg-orb bg-orb-a" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-b" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="shell header-bar">
+            <a class="brand" href="{{ site.baseurl }}/" aria-label="AAC Speech & Communication home">
+                <span class="brand-mark">
+                    <img src="{{ site.baseurl }}/assets/icon.webp" width="54" height="54"
+                        alt="AAC Speech & Communication logo" aria-hidden="true" style="aspect-ratio: 1/1;" />
+                </span>
+                <span class="brand-copy">
+                    <strong>AAC Speech & Communication</strong>
+                    <span>Offline communication boards</span>
+                </span>
+            </a>
+            <nav class="header-nav">
+                <a href="{{ site.baseurl }}/#features">Features</a>
+                <a href="{{ site.baseurl }}/#screenshots">Screenshots</a>
+                <a href="{{ site.baseurl }}/#premium">Premium</a>
+                <a href="{{ site.baseurl }}/resources/">Resources</a>
+                <a href="{{ site.baseurl }}/#download" class="mobile-get-pill" aria-label="Jump to download links">GET</a>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false"
+                    aria-label="Switch theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3 7.1 7.1 0 0 0 21 13.2Z" />
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4.2" />
+                        <path
+                            d="M12 1.8v2.4M12 19.8v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" />
+                    </svg>
+                </button>
+                <a class="store-badge-link header-store-link"
+                    href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dreferral%26utm_campaign%3Dresources_articles%26utm_content%3Dbackup_restore_guide"
+                    target="_blank" rel="noopener" aria-label="Open on Apple Store">
+                    <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/apple-badge.webp"
+                        width="260" height="80" alt="Get it on Apple Store" />
+                </a>
+                <a class="header-store-text"
+                    href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dreferral%26utm_campaign%3Dresources_articles%26utm_content%3Dbackup_restore_guide"
+                    target="_blank" rel="noopener">
+                    Apple Store
+                </a>
+                <a class="store-badge-link header-store-link"
+                    href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dreferral%26utm_campaign%3Dresources_articles%26utm_content%3Dbackup_restore_guide"
+                    target="_blank" rel="noopener" aria-label="Open on Google Play">
+                    <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/google-play-badge.webp"
+                        width="260" height="80" alt="Get it on Google Play" />
+                </a>
+                <a class="header-store-text"
+                    href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dreferral%26utm_campaign%3Dresources_articles%26utm_content%3Dbackup_restore_guide"
+                    target="_blank" rel="noopener">
+                    Google Play
+                </a>
+                <a class="store-badge-link header-store-link"
+                    href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=referral&utm_campaign=resources_articles&utm_content=backup_restore_guide"
+                    target="_blank" rel="noopener" aria-label="Open on Amazon">
+                    <img class="store-badge store-badge-header" src="{{ site.baseurl }}/assets/amazon-badge.webp"
+                        width="260" height="80" alt="Available at Amazon" />
+                </a>
+                <a class="header-store-text"
+                    href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=site_header&utm_campaign=desktop_nav"
+                    target="_blank" rel="noopener">
+                    Amazon
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-content">
+        <section class="shell section">
+            <article style="max-width: 740px; margin: 0 auto;">
+                <div class="section-heading">
+                    <p class="eyebrow">Data &amp; Backups</p>
+                    <h1>How to Back Up and Restore AAC Communication Boards</h1>
+                    <p class="lede">Simple steps to save someone's communication boards and bring them back on a new or replacement device.</p>
+                </div>
+
+                <div class="article-body">
+                    <h2>Why make a backup?</h2>
+                    <p>A communication board can include someone's words, photos, and recorded messages. A backup is a saved copy, so you can bring those boards back if a device is lost, damaged, replaced, or reset.</p>
+                    <p>Make a backup after important changes and before replacing or resetting a device. Keep a copy somewhere other than the device, so it is still available if the device is lost.</p>
+
+                    <h2>Choose the right kind of backup</h2>
+                    <p>There are two ways to save boards:</p>
+                    <ul>
+                        <li><strong>Save everything:</strong> Choose <strong>Settings → Backup &amp; Settings → Export Backup</strong>. This saves the app's boards and available photos and recordings in one file.</li>
+                        <li><strong>Save one person's boards:</strong> Choose <strong>Settings → Profiles → Export Boards</strong>. This saves the boards in the profile you are using. It does not change the settings on the device receiving the boards.</li>
+                    </ul>
+                    <p>Saved files work across supported Apple, Android, and Amazon Fire devices that have the app. To bring everything back, use <strong>Import Backup</strong>. To bring back one person's boards, use <strong>Import Boards</strong> on the Profiles screen.</p>
+
+                    <h2>Save a copy of everything to a file</h2>
+                    <ol>
+                        <li>Open <strong>Settings → Backup &amp; Settings</strong>.</li>
+                        <li>Tap <strong>Export Backup</strong> and wait for the app to prepare your saved copy.</li>
+                        <li>When asked, save or share the file somewhere you can find it again, such as another device or a trusted cloud storage account.</li>
+                    </ol>
+                    <p>The saved file may contain personal words, photos, and recordings. Share it only with people you trust.</p>
+
+                    <h2>Bring everything back from a saved file</h2>
+                    <ol>
+                        <li>On the device where you want the boards, open <strong>Settings → Backup &amp; Settings</strong>.</li>
+                        <li>Tap <strong>Import Backup</strong>.</li>
+                        <li>Choose the saved backup file and wait for the app to finish.</li>
+                    </ol>
+                    <p>Restoring a full backup replaces the boards on that device. If you need to keep them, save a copy first.</p>
+
+                    <h2>Use cloud backup across devices</h2>
+                    <p>Cloud backup is a Premium feature. You need to create a cloud account before using it. Use the same account on every device where you want to save or restore boards. Repeat the sign-in steps on each device.</p>
+                    <ol>
+                        <li>On the first device, open <strong>Settings → General</strong> and turn on <strong>Enable cloud save/restore</strong>.</li>
+                        <li>Tap <strong>Log in to enable cloud sync</strong>, then choose <strong>Create Account</strong>. Enter your email address and choose a password. Keep these details safe.</li>
+                        <li>Go to <strong>Settings → Backup &amp; Settings</strong> and tap <strong>Export Backup</strong> to save your backup to your cloud account.</li>
+                        <li>On another device, turn on <strong>Enable cloud save/restore</strong> in <strong>Settings → General</strong>. Go to the sign-in screen and log in with the same email address and password you used to create the account.</li>
+                        <li>On that device, open <strong>Settings → Backup &amp; Settings</strong>, tap <strong>Import Backup</strong>, and confirm the restore.</li>
+                    </ol>
+                    <p>Restoring replaces the boards on the device. Save a copy of any boards already on it if you want to keep them. On the web version, use a saved backup file to restore.</p>
+
+                    <h2>Share a patient's boards (for SLPs and SLTs)</h2>
+                    <p>Make a separate profile for the patient, so their boards stay separate from your own.</p>
+                    <ol>
+                        <li>Open <strong>Settings</strong>, tap the person icon to open <strong>Profiles</strong>, and create a profile for the patient. Switch to it and make the boards you want to share.</li>
+                        <li>Tap <strong>Export Boards</strong>. The app saves the boards in that profile to a file. The patient's device settings, such as language, voice, and display choices, are not changed when the boards are imported.</li>
+                        <li>Send the file to the patient or caregiver using a method available to both of you, such as Bluetooth, Dropbox, or email. Only send it to the intended person.</li>
+                        <li>On the patient's device, save the file. In the app, open <strong>Settings → Profiles</strong>, choose or create the profile for the patient, and tap <strong>Import Boards</strong>. Choose the file and wait for the import to finish.</li>
+                    </ol>
+                    <p>The file works with the app on supported Apple, Android, and Amazon Fire devices. The boards are added to the profile you choose. If a board has the same name as one already there, the imported board replaces it. Save a copy first if you need to keep the existing board.</p>
+
+                    <h2>Remember</h2>
+                    <ul>
+                        <li>Save a new copy after making important changes.</li>
+                        <li>Keep a copy somewhere other than the device.</li>
+                        <li>Before restoring, save a copy of any boards on the device that you want to keep.</li>
+                        <li>Do not tap <strong>Delete All Data</strong> to make a backup. It permanently deletes data and cloud backups.</li>
+                    </ul>
+
+                    <div class="quote-panel" style="margin: 2rem 0;">
+                        <p><strong>A good habit:</strong> keep a recent backup somewhere safe, so the person's communication boards are ready when needed.</p>
+                    </div>
+                </div>
+
+                <div class="premium-panel" style="margin: 2rem 0 3rem 0;">
+                    <div class="premium-header" id="download">
+                        <h3>Keep Their Communication Boards Close at Hand</h3>
+                    </div>
+                    <p>Create and save communication boards with AAC Speech &amp; Communication. The app works offline on iPhone, iPad, Android, and Amazon Fire devices.</p>
+
+                    <div class="hero-actions">
+                        <a class="store-badge-link"
+                            href="{{ site.apple_store_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dreferral%26utm_campaign%3Dresources_articles%26utm_content%3Dbackup_restore_guide"
+                            target="_blank" rel="noopener">
+                            <img class="download-store-badge" src="{{ site.baseurl }}/assets/apple-badge.webp" width="260" height="80"
+                                alt="Get it on Apple Store" />
+                        </a>
+                        <a class="store-badge-link"
+                            href="{{ site.google_play_url }}&referrer=utm_source%3Dwebsite%26utm_medium%3Dreferral%26utm_campaign%3Dresources_articles%26utm_content%3Dbackup_restore_guide"
+                            target="_blank" rel="noopener">
+                            <img class="download-store-badge" src="{{ site.baseurl }}/assets/google-play-badge.webp" width="260" height="80"
+                                alt="Get it on Google Play" />
+                        </a>
+                        <a class="store-badge-link"
+                            href="{{ site.amazon_url }}?tag=1234560fd477-21&utm_source=website&utm_medium=referral&utm_campaign=resources_articles&utm_content=backup_restore_guide"
+                            target="_blank" rel="noopener">
+                            <img class="download-store-badge" src="{{ site.baseurl }}/assets/amazon-badge.webp" width="260" height="80"
+                                alt="Available at Amazon" />
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer shell">
+        <p>© AAC Speech &amp; Communication. Offline AAC support for everyday communication.</p>
+        <nav class="footer-nav">
+            <a href="{{ site.baseurl }}/resources/">Resources &amp; Guides</a>
+        </nav>
+    </footer>
+</body>
+
+</html>
