@@ -561,17 +561,17 @@ layout: null
       </div>
 
       <div class="shot-grid">
-        <figure class="shot-card">
+        <figure class="shot-card" role="button" tabindex="0" aria-label="Enlarge screenshot: Simple, powerful communication with an instant board preview">
           <img src="{{ site.baseurl }}/assets/PhonePromo1.webp" width="1284" height="2778"
             alt="Promo screenshot showing simple, powerful communication with a live AAC board preview" />
           <figcaption>Simple, powerful communication with an instant board preview.</figcaption>
         </figure>
-        <figure class="shot-card">
+        <figure class="shot-card" role="button" tabindex="0" aria-label="Enlarge screenshot: Build fully custom boards with fast editing controls">
           <img src="{{ site.baseurl }}/assets/PhonePromo2.webp" width="1284" height="2778"
             alt="Promo screenshot showing custom board creation and editing tools" />
           <figcaption>Build fully custom boards with fast editing controls.</figcaption>
         </figure>
-        <figure class="shot-card">
+        <figure class="shot-card" role="button" tabindex="0" aria-label="Enlarge screenshot: Smart Board Creator auto-crops photos into usable grids">
           <img src="{{ site.baseurl }}/assets/PhonePromo4.webp" width="1284" height="2778"
             alt="Promo screenshot showing smart board creator auto-cropping photos into grids" />
           <figcaption>Smart Board Creator auto-crops photos into usable grids.</figcaption>
@@ -884,7 +884,13 @@ layout: null
 
   <dialog class="fullscreen-viewer" data-fullscreen>
     <button class="fullscreen-close" type="button" data-close aria-label="Close full screen view">Close</button>
-    <img src="" alt="Expanded full screen application preview" />
+    <div class="fullscreen-stage">
+      <button class="fullscreen-nav fullscreen-prev" type="button" data-carousel-prev aria-label="Previous image"><span aria-hidden="true"></span></button>
+      <button class="fullscreen-nav fullscreen-prev" type="button" data-screenshot-prev aria-label="Previous screenshot"><span aria-hidden="true"></span></button>
+      <img src="" alt="Expanded full screen application preview" />
+      <button class="fullscreen-nav fullscreen-next" type="button" data-screenshot-next aria-label="Next screenshot"><span aria-hidden="true"></span></button>
+      <button class="fullscreen-nav fullscreen-next" type="button" data-carousel-next aria-label="Next image"><span aria-hidden="true"></span></button>
+    </div>
   </dialog>
 
   <script>
@@ -907,6 +913,7 @@ layout: null
       const themeKey = 'aac-theme';
       const carouselControllers = [];
       let currentTheme = localStorage.getItem(themeKey) || defaultTheme;
+      let activeFullscreenCarousel = null;
 
       function updateSlideImages() {
         const allSlides = Array.from(document.querySelectorAll('[data-slide]'));
@@ -989,6 +996,10 @@ layout: null
 
         function openFullscreen(src, alt) {
           stopAutoSlide();
+          activeFullscreenCarousel = controller;
+          fullscreenMode = 'carousel';
+          fullscreen.classList.remove('is-screenshot-gallery');
+          fullscreen.classList.add('is-carousel-gallery');
           fullscreenImage.src = src;
           fullscreenImage.alt = alt;
           if (typeof fullscreen.showModal === 'function') {
@@ -1004,6 +1015,10 @@ layout: null
           } else {
             fullscreen.removeAttribute('open');
           }
+          fullscreenMode = 'carousel';
+          activeFullscreenCarousel = null;
+          fullscreen.classList.remove('is-screenshot-gallery');
+          fullscreen.classList.remove('is-carousel-gallery');
           fullscreenImage.src = '';
           fullscreenImage.alt = '';
           startAutoSlide();
@@ -1056,17 +1071,90 @@ layout: null
 
       carousels.forEach(initCarousel);
 
+      const screenshotCards = document.querySelectorAll('.shot-card');
+      const screenshotFullscreenImage = fullscreen.querySelector('img');
+      const fullscreenCloseButton = fullscreen.querySelector('[data-close]');
+      const screenshotPreviousButton = fullscreen.querySelector('[data-screenshot-prev]');
+      const screenshotNextButton = fullscreen.querySelector('[data-screenshot-next]');
+      const carouselPreviousButton = fullscreen.querySelector('[data-carousel-prev]');
+      const carouselNextButton = fullscreen.querySelector('[data-carousel-next]');
+      let activeScreenshotIndex = -1;
+      let fullscreenMode = 'carousel';
+
+      function showScreenshot(index) {
+        activeScreenshotIndex = (index + screenshotCards.length) % screenshotCards.length;
+        const image = screenshotCards[activeScreenshotIndex].querySelector('img');
+        if (!image) return;
+        screenshotFullscreenImage.src = image.currentSrc || image.src;
+        screenshotFullscreenImage.alt = image.alt;
+      }
+
+      function openScreenshotFullscreen(card) {
+        showScreenshot(Array.from(screenshotCards).indexOf(card));
+        fullscreenMode = 'screenshots';
+        fullscreen.classList.add('is-screenshot-gallery');
+        fullscreen.classList.remove('is-carousel-gallery');
+        if (typeof fullscreen.showModal === 'function') {
+          fullscreen.showModal();
+        } else {
+          fullscreen.setAttribute('open', '');
+        }
+      }
+
+      screenshotCards.forEach((card) => {
+        card.addEventListener('click', () => openScreenshotFullscreen(card));
+        card.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openScreenshotFullscreen(card);
+          }
+        });
+      });
+
+      screenshotPreviousButton?.addEventListener('click', () => {
+        if (fullscreenMode === 'screenshots') showScreenshot(activeScreenshotIndex - 1);
+      });
+      screenshotNextButton?.addEventListener('click', () => {
+        if (fullscreenMode === 'screenshots') showScreenshot(activeScreenshotIndex + 1);
+      });
+      function navigateOpenCarousel(direction) {
+        if (fullscreenMode !== 'carousel') return;
+        const activeController = activeFullscreenCarousel;
+        if (activeController) {
+          if (direction < 0) activeController.previous();
+          else activeController.next();
+          const activeSlide = activeController.carousel.querySelector('.carousel-slide.is-active');
+          if (activeSlide) {
+            screenshotFullscreenImage.src = activeSlide.dataset.fullscreenSrc || activeSlide.querySelector('img')?.src || '';
+            screenshotFullscreenImage.alt = activeSlide.dataset.fullscreenAlt || activeSlide.querySelector('img')?.alt || '';
+          }
+        }
+      }
+      carouselPreviousButton?.addEventListener('click', () => navigateOpenCarousel(-1));
+      carouselNextButton?.addEventListener('click', () => navigateOpenCarousel(1));
+      fullscreenCloseButton?.addEventListener('click', () => {
+        fullscreen.classList.remove('is-screenshot-gallery');
+        fullscreen.classList.remove('is-carousel-gallery');
+        fullscreenMode = 'carousel';
+        activeFullscreenCarousel = null;
+        fullscreen.close();
+      });
+
       themeToggle.addEventListener('click', () => {
         setTheme(currentTheme === 'dark' ? 'light' : 'dark');
       });
 
       fullscreen.addEventListener('click', (event) => {
         if (event.target === fullscreen) {
-          const activeController = carouselControllers.find((controller) => controller.carousel.contains(document.activeElement));
-          if (activeController) {
-            activeController.carousel.querySelector('[data-close]')?.click();
+          if (fullscreenMode === 'carousel') {
+            const activeController = carouselControllers.find((controller) => controller.carousel.contains(document.activeElement));
+            if (activeController) {
+              activeController.carousel.querySelector('[data-close]')?.click();
+            } else {
+              fullscreen.close();
+            }
           } else {
-            fullscreen.close();
+            fullscreenCloseButton?.click();
           }
         }
       });
@@ -1074,6 +1162,40 @@ layout: null
       document.addEventListener('keydown', (event) => {
         if (fullscreen.open && event.key === 'Escape') {
           fullscreen.close();
+          return;
+        }
+
+        if (fullscreen.open) {
+          if (fullscreenMode === 'screenshots') {
+            if (event.key === 'ArrowLeft') {
+              event.preventDefault();
+              showScreenshot(activeScreenshotIndex - 1);
+            }
+            if (event.key === 'ArrowRight') {
+              event.preventDefault();
+              showScreenshot(activeScreenshotIndex + 1);
+            }
+          } else {
+            const openCarousel = activeFullscreenCarousel;
+            if (openCarousel && event.key === 'ArrowLeft') {
+              event.preventDefault();
+              openCarousel.previous();
+              const activeSlide = openCarousel.carousel.querySelector('.carousel-slide.is-active');
+              if (activeSlide) {
+                screenshotFullscreenImage.src = activeSlide.dataset.fullscreenSrc || activeSlide.querySelector('img')?.src || '';
+                screenshotFullscreenImage.alt = activeSlide.dataset.fullscreenAlt || activeSlide.querySelector('img')?.alt || '';
+              }
+            }
+            if (openCarousel && event.key === 'ArrowRight') {
+              event.preventDefault();
+              openCarousel.next();
+              const activeSlide = openCarousel.carousel.querySelector('.carousel-slide.is-active');
+              if (activeSlide) {
+                screenshotFullscreenImage.src = activeSlide.dataset.fullscreenSrc || activeSlide.querySelector('img')?.src || '';
+                screenshotFullscreenImage.alt = activeSlide.dataset.fullscreenAlt || activeSlide.querySelector('img')?.alt || '';
+              }
+            }
+          }
           return;
         }
 
