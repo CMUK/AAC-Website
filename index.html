@@ -425,8 +425,7 @@ layout: null
               </svg>
             </div>Natural Voice & Sentence Building
           </h3>
-          <p>Tap communication tiles to build full sentences instantly using high-quality built-in device text-to-speech
-            output.
+          <p>Tap communication tiles to build full sentences instantly using natural-sounding text-to-speech.
           </p>
         </article>
 
@@ -460,8 +459,7 @@ layout: null
             </div>
             Flexible Grid Settings
           </h3>
-          <p>Create up to 3 specialized custom speech boards completely free, or upgrade to manage a fully unlimited
-            setup.</p>
+          <p>Create up to 3 custom speech boards for free, or upgrade to create unlimited boards.</p>
         </article>
 
         <!-- Grid 5 -->
@@ -477,8 +475,27 @@ layout: null
             </div>
             Mulberry Symbol Library
           </h3>
-          <p>Instantly search thousands of open-source Mulberry SVG vector symbols, or smoothly import personal images.
+          <p>Instantly search thousands of Mulberry communication symbols, or import your own images.
           </p>
+        </article>
+
+        <!-- Grid 6 -->
+        <article class="feature-card">
+          <h3>
+            <div class="feature-icon" aria-hidden="true"
+              style="color: var(--brand); margin-bottom: 1rem; width: 32px; height: 32px;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 3a9 9 0 1 0 0 18h1.2a2.8 2.8 0 0 0 2.13-4.62 1.3 1.3 0 0 1 1-2.13H18a3 3 0 0 0 3-3c0-4.56-4.03-8.25-9-8.25Z" />
+                <circle cx="7.5" cy="11" r="1" fill="currentColor" stroke="none" />
+                <circle cx="10" cy="7.5" r="1" fill="currentColor" stroke="none" />
+                <circle cx="14" cy="7.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </div>
+            Personalised Skin Tones
+          </h3>
+          <p>Choose from five skin tones to make symbols more representative. Set your preference across all boards or customise individual tiles.</p>
         </article>
 
         <!-- Grid 6 -->
@@ -494,7 +511,7 @@ layout: null
             </div>
             Inclusive Accessibility Tools
           </h3>
-            <p>Configured with Fitzgerald Key color coding, light and dark themes, font adjustments, and protective cream glare-reduction backgrounds.</p>
+            <p>Includes Fitzgerald Key colour coding, light and dark themes, font adjustments, and cream backgrounds to reduce glare.</p>
         </article>
 
         <!-- Grid 7 -->
@@ -553,11 +570,6 @@ layout: null
           <img src="{{ site.baseurl }}/assets/PhonePromo2.webp" width="1284" height="2778"
             alt="Promo screenshot showing custom board creation and editing tools" />
           <figcaption>Build fully custom boards with fast editing controls.</figcaption>
-        </figure>
-        <figure class="shot-card">
-          <img src="{{ site.baseurl }}/assets/PhonePromo3.webp" width="1284" height="2778"
-            alt="Promo screenshot showing symbol search across thousands of icons" />
-          <figcaption>Search thousands of symbols instantly when you need them.</figcaption>
         </figure>
         <figure class="shot-card">
           <img src="{{ site.baseurl }}/assets/PhonePromo4.webp" width="1284" height="2778"
@@ -891,7 +903,7 @@ layout: null
         return;
       }
 
-      const defaultTheme = 'dark';
+      const defaultTheme = 'light';
       const themeKey = 'aac-theme';
       const carouselControllers = [];
       let currentTheme = localStorage.getItem(themeKey) || defaultTheme;

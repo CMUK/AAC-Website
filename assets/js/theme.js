@@ -2,7 +2,7 @@
   const themeToggle = document.querySelector('[data-theme-toggle]');
   const themeColorMeta = document.querySelector('meta[name="theme-color"]');
   const themeKey = 'aac-theme';
-  const defaultTheme = 'dark';
+  const defaultTheme = 'light';
 
   let currentTheme = localStorage.getItem(themeKey) || defaultTheme;
 
